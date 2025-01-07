@@ -70,7 +70,7 @@ const StudyGermany = () => {
       const scrollHeight =
         document.documentElement.scrollHeight - window.innerHeight;
       const progress = (scrollTop / scrollHeight) * 100;
-      const offset = (100 - progress) * (1250 / 100);
+      const offset = (100 - progress) * (1350 / 100);
       console.log(offset, "offset");
       setStrokeDashOffset(offset);
 

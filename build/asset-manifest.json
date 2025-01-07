@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0b527215.css",
-    "main.js": "/static/js/main.e90b4e81.js",
+    "main.js": "/static/js/main.2e59dc44.js",
     "static/js/453.fb2e08f7.chunk.js": "/static/js/453.fb2e08f7.chunk.js",
     "static/media/Free Counselling.svg": "/static/media/Free Counselling.fd23695774aea2046abf64f80e96cd8b.svg",
     "static/media/Statement of purpose.svg": "/static/media/Statement of purpose.5d26828ffd35c9ec051e6f4da43e00b0.svg",
@@ -117,11 +117,11 @@
     "static/media/location.svg": "/static/media/location.64d6ce9b1f8b63440f28e05e879939c1.svg",
     "static/media/dividerline.svg": "/static/media/dividerline.87704cf845e692481a3f7cfeed7a3a5e.svg",
     "main.0b527215.css.map": "/static/css/main.0b527215.css.map",
-    "main.e90b4e81.js.map": "/static/js/main.e90b4e81.js.map",
+    "main.2e59dc44.js.map": "/static/js/main.2e59dc44.js.map",
     "453.fb2e08f7.chunk.js.map": "/static/js/453.fb2e08f7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0b527215.css",
-    "static/js/main.e90b4e81.js"
+    "static/js/main.2e59dc44.js"
   ]
 }
