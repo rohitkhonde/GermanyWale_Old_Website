@@ -1,0 +1,12 @@
+.herowrapper {
+  background-image: url("../assets/Hero/herobg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+}
+@media screen and (min-width:320px) and (max-width:480px){
+  .herowrapper{
+    background-position: center center;
+  }
+}

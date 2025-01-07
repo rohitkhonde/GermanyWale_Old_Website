@@ -1,0 +1,70 @@
+.first{
+    background-image: url("../assets/usp/studentsserved.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.second{
+      background-image: url("../assets/usp/acceptance.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.three{
+       background-image: url("../assets/usp/elite.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.four{
+       background-image: url("../assets/usp/gurantee.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.five{
+         background-image: url("../assets/usp/admits.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.six{
+    background-image: url("../assets/usp/achievements.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(119, 26, 26, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+/* .wrapper{
+  background-color: #302b2b37;
+}
+.wrapper:hover{
+  background-color: transparent;
+} */
+
+.first:hover,
+.second:hover,
+.three:hover ,
+.four:hover,
+.five:hover,
+.six:hover{
+  background-color: #EA7D06; 
+  background-image: none;
+  border-radius: 32px;
+}
+
+.grid div:hover {
+  background-color: none;
+}
+
+/* @media screen and (min-width: 320px) and (max-width: 768px) {
+  .three{
+    height: 100% !important;
+    background-size: contain;
+  }
+} */

@@ -1,0 +1,9 @@
+.mentorWrapper {
+  background-image: url("../assets/mentor/mentorbg.svg");
+  height: 65vh;
+  width: 100%;
+  border-radius: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}

@@ -1,0 +1,20 @@
+
+
+.container {
+  overflow: hidden;
+  width: 100%; /* Ensure the container spans the full width */
+}
+
+.moving-image {
+  width: 100%; /* Ensure the image spans the full width */
+  animation: moveRightToLeft 26s linear infinite; /* Apply the animation */
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(-110%);
+  }
+}

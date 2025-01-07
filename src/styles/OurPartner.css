@@ -1,0 +1,10 @@
+.partnerWrapper {
+  background-image: url("../assets/partner/background.png");
+  width: 100%;
+  height: auto;
+  min-height: 10rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+

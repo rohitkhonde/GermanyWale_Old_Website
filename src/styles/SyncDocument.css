@@ -1,0 +1,13 @@
+.syncTextIcon::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.syncTextIcon {
+  height: 22px;
+  width: 22px;
+  color:#EA7D19 ;
+  margin-right: 1rem;
+}

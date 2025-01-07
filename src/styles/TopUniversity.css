@@ -1,0 +1,7 @@
+.university_wrapper{
+    background-image: url("../assets/university/universityBackground.png");
+    background-position: center center;
+    height: max-content;
+    /* padding: 2rem 0; */
+    padding-bottom: 5rem;
+}
