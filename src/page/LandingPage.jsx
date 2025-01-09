@@ -11,6 +11,14 @@ import Footer from "../component/Footer";
 import Universitycomp from "../component/Universitycomp";
 import Usp from "../component/Usp";
 import News from "../component/News";
+import Partners from "../component/partners/Partners";
+import Webslider from "../component/slider/Webslider";
+import MentorSection from "../component/mentor/MentorSection";
+import Header from "../component/reviews/Header";
+import RatingSection from "../component/reviews/RatingSection";
+import Testimonials from "../component/reviews/Testimonials";
+import TestimonialsSlider from "../component/reviews/Testimonials";
+import ChooseUs2 from "../component/chooseUs/ChooseUs2";
 
 const LandingPage = () => {
   const [watchStory, setWatchstory] = useState(false);
@@ -38,14 +46,25 @@ const LandingPage = () => {
         {/* <Header />
         <Navbar /> */}
         <Hero />
+        <Universitycomp />
         <Testimonal />
         <Usp />
+        {/* <ChooseUs2 /> */}
         <StudyGermany />
         <Transparency />
-        <Universitycomp />
+        {/* Partners Section */}
+        <Partners />
+        {/* <Webslider /> */}
         <SyncDocument />
+        <MentorSection />
         <StayinTouch />
+
+        {/* <Header /> */}
+        {/* <RatingSection /> */}
+        <TestimonialsSlider />
+
         <News />
+
         {/* <Footer /> */}
       </div>
     </>

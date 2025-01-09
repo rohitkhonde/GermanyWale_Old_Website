@@ -28,6 +28,7 @@ import Statement from "./component/ServicesPages/Statement/Statement";
 import UniversityApplication from "./component/ServicesPages/UniversityApplication/UniversityApplication";
 import Accomodation from "./component/ServicesPages/Accomodation/Accomodation";
 import Visa from "./component/ServicesPages/VisaAssistance/Visa";
+import TestimonialsSlider from "./component/reviews/Testimonials";
 
 function App() {
   const ScrollToTop = () => {
@@ -70,6 +71,7 @@ function App() {
           />
           <Route path="/accomodation" element={<Accomodation />} />
           <Route path="/visa" element={<Visa />} />
+          <Route path="/reviews" element={<TestimonialsSlider />} />
         </Routes>
         {/* Footer visible on all pages */}
         <Footer />

@@ -16,14 +16,14 @@ const Usp = () => {
     <section className="px-4 pt-4 sm:px-6 sm:pt-8 lg:px-10 lg:pt-10 ">
       <div className="container">
         <div className="mb-10">
-          <h3
+          {/* <h3
             className="text-center text-lg sm:text-xl font-bold mt-4 mb-1 overflow-hidden bg-[#FF9422] bg-clip-text text-transparent"
             style={{ fontFamily: "Gilroy" }}
           >
             Why Choose Us
-          </h3>
+          </h3> */}
           <p
-            className="text-xl sm:text-4xl bg-[#D63715]  font-semibold bg-clip-text text-transparent"
+            className="text-xl sm:text-4xl  font-semibold bg-gradient-to-r from-[#fff942] via-[#d63715] to-[#d63815] bg-clip-text text-transparent"
             style={{ fontFamily: "Gilroy-Medium" }}
           >
             Endless Possibilities Begin Here
@@ -48,9 +48,7 @@ const Usp = () => {
             <div className="grid three rounded-2xl">
               <div className="hover:rounded-[2.1rem] rounded-[1.3rem] sm:rounded-[2rem] flex flex-col justify-end items-start text-md sm:text-2xl font-semibold text-white bg-[#302b2b61] hover:bg-transparent ">
                 <h3 className="ms-10 sm:ms-3">100+</h3>
-                <h3 className="ms-3 mb-7">
-                  Elite University Admissions
-                </h3>
+                <h3 className="ms-3 mb-7">Elite University Admissions</h3>
               </div>
             </div>
             <div className="grid gap-2">

@@ -73,12 +73,12 @@ function News({ handleWatchStory }) {
 
   return (
     <>
-      <div className="container h-max" id="about">
-        <section className="flex flex-col">
+      <div className="container h-max mb-4" id="about">
+        <section className="flex flex-col mb-4">
           <div className="px-4 py-4 sm:px-6 sm:py-8 lg:px-10 lg:py-10 w-full overflow-hidden">
-            <div className="flex justify-between px-1 sm:px-8 lg:px-5">
+            <div className="flex justify-center px-1 sm:px-8 lg:px-5">
               <h3
-                className="text-sm sm:text-2xl font-bold mt-4 mb-5 overflow-hidden"
+                className="text-sm sm:text-2xl w-[92%] font-bold mt-4 mb-5 overflow-hidden  bg-gradient-to-r from-[#fff942] via-[#d63715] to-[#d63815] bg-clip-text text-transparent"
                 style={{ fontFamily: "Gilroy" }}
               >
                 Latest News From Our Blog
@@ -87,7 +87,7 @@ function News({ handleWatchStory }) {
                 {" "}
                 <img src={show} alt="text" height="18" width="18" />
                 <span
-                  className="ms-1 text-sx sm:text-sm bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent"
+                  className="ms-1  text-sx sm:text-sm bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent"
                   style={{ fontFamily: "Gilroy-Medium" }}
                 >
                   Show More
@@ -101,9 +101,7 @@ function News({ handleWatchStory }) {
                     <div
                       className="border m-auto w-full sm:w-[88%] lg:w-[95%] shadow-xl sm:mr-6 cursor-pointer rounded-xl"
                       key={index}
-                      onClick={() =>
-                        window.open(card.blogLink, "_blank")
-                      }
+                      onClick={() => window.open(card.blogLink, "_blank")}
                     >
                       <div className="border mb-2 rounded-xl">
                         <div className="border p-2 rounded-xl">

@@ -70,8 +70,7 @@ function Testimonal() {
     {
       imageSrc: purvanshi,
       name: "Purvanshi Sharma",
-      para1:
-        "The best part about the Germanywale team is that they don't",
+      para1: "The best part about the Germanywale team is that they don't",
       para2: `treat you as a customer. `,
 
       videoLink: " ",
@@ -218,10 +217,10 @@ function Testimonal() {
       <div className="container" id="review">
         <section className="px-4 py-4 sm:px-6 sm:py-8 lg:px-10 lg:py-10 ">
           <div className="md:px-4 pt-4">
-            <div className="flex justify-between items-center px-2 sm:px-5">
-              <div className="text-left">
+            <div className="flex justify-center items-center px-2 sm:px-5">
+              <div className="text-center w-[100%]">
                 <h3
-                  className="text-lg sm:text-3xl font-bold mt-4 mb-4 overflow-hidden bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent"
+                  className="text-lg  sm:text-3xl font-bold mt-4 mb-4 overflow-hidden bg-gradient-to-r from-[#fff942] via-[#d63715] to-[#d63815] bg-clip-text text-transparent"
                   style={{ fontFamily: "Gilroy" }}
                 >
                   What Our Student Speak

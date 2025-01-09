@@ -52,7 +52,7 @@ const Navbar = () => {
             Services
           </Link>
           <Link
-            to="/testimonials"
+            to="/reviews"
             className="text-md font-extrabold text-black hover:text-orange-400"
           >
             Reviews

@@ -1,5 +1,6 @@
 import React from "react";
 import playIcon from "../assets/Updated-Testimonal/play.svg";
+// import "../styles/Testimonial.css";
 
 const TestiCard = ({ item }) => {
   return (
@@ -84,14 +85,14 @@ const TestiCard = ({ item }) => {
         <div className="relative p-2 sm:p-4 pb-1 min-h-[20rem] md:min-h-[20rem]  ">
           <div className="min-h-[7rem] mb-auto">
             <div
-              className="newtesti_content text-left pt-2 text-md sm:text-lg"
+              className="  text-left pt-2 text-sm sm:text-lg"
               style={{ fontFamily: "Gilroy-Medium" }}
             >
               {item.para1}
             </div>
 
             <div
-              className=" text-left w-60 mb-1 text-md sm:text-lg newtesti_content2 "
+              className=" text-left w-60 mb-1 text-md sm:text-lg "
               style={{ fontFamily: "Gilroy-Medium" }}
               dangerouslySetInnerHTML={{
                 __html: item.para2,
@@ -100,10 +101,7 @@ const TestiCard = ({ item }) => {
           </div>
 
           <div className="absolute bottom-2 ml-1">
-            <div
-              className="text-left "
-              style={{ fontFamily: "Gilroy-Medium" }}
-            >
+            <div className="text-left " style={{ fontFamily: "Gilroy-Medium" }}>
               <p className="font-semibold text-lg">{item.name}</p>
             </div>
             <p

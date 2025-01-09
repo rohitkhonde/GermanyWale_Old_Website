@@ -8,8 +8,14 @@ import oodd from "../assets/Hero/audi1.jpg";
 import sap from "../assets/Hero/sap.png";
 import lufthansa from "../assets/Hero/lufthansa2.png";
 
+// New image
+import t from "../assets/Hero/t.png";
+import b from "../assets/Hero/b.png";
+import a from "../assets/Hero/a.png";
+import l from "../assets/Hero/l.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { logRoles } from "@testing-library/react";
 
 const Hero = () => {
   // useEffect
@@ -29,7 +35,7 @@ const Hero = () => {
               <div className="text-center lg:text-left pt-4 pb-3 sm:pt-8 sm:pb-0 ">
                 <div
                   className="mb-5"
-                  style={{ fontFamily: "Gilroy" }}
+                  style={{ fontFamily: "Gilroy", fontWeight: "700" }}
                 >
                   <p className="text-2xl sm:text-3xl mb-3">
                     Empowering dreams of
@@ -44,7 +50,7 @@ const Hero = () => {
                     Call for FREE counselling
                   </button>
                 </div>
-                <div className="flex items-center mb-3 text-center md:text-left justify-center md:justify-start gap-1">
+                {/* <div className="flex items-center mb-3 text-center md:text-left justify-center md:justify-start gap-1">
                   <img
                     src={studentsgroup}
                     alt="studentsgroup"
@@ -56,17 +62,11 @@ const Hero = () => {
                     </span>{" "}
                     guaranteed admission
                   </p>
-                </div>
-                <div
-                  className=""
-                  style={{ fontFamily: "Gilroy-Regular" }}
-                >
+                </div> */}
+                <div className="" style={{ fontFamily: "Gilroy-Regular" }}>
                   <p className="text-sm sm:text-md">
                     Our students finished University to work at{" "}
-                    <span className="text-[#e27c00]">
-                      global offices
-                    </span>{" "}
-                    of
+                    <span className="text-[#e27c00]">global offices</span> of
                   </p>
                 </div>
               </div>
@@ -84,27 +84,27 @@ const Hero = () => {
               style={{ top: "-40px" }}
             >
               <img
-                src={tesla}
+                src={t}
                 alt="tesla"
                 className="h-9 sm:h-12 w-7 sm:w-14 object-fill sm:object-contain"
               />
               <img
-                src={bmw}
+                src={b}
                 alt="bmw"
                 className=" h-9 sm:h-10 w-10 sm:w-10 md:w-14 object-fill sm:object-contain"
               />
               <img
-                src={oodd}
+                src={a}
                 alt="oodd"
                 className="h-18 sm:h-14 w-12 sm:w-16 md:w-20 object-fill sm:object-contain"
               />
-              <img
+              {/* <img
                 src={sap}
                 alt="sap"
                 className="h-18 sm:h-12 w-12 sm:w-16 md:w-20 object-fill sm:object-contain"
-              />
+              /> */}
               <img
-                src={lufthansa}
+                src={l}
                 alt="lufthansa"
                 className="h-18 sm:h-24 w-24 sm:w-32 md:w-40 object-fill sm:object-contain"
               />

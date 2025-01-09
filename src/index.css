@@ -23,6 +23,7 @@ code {
   color: #d63815 !important;
   font-size: 20px !important;
 }
+
 .mentor-slider .slick-next::before {
   color: #d63815 !important;
   font-size: 20px !important;
@@ -51,4 +52,37 @@ code {
 @font-face {
   font-family: "ZonaPro-Bold";
   src: url("styles/fonts/ZonaPro-Bold.otf");
+}
+
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("styles/fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("styles/fonts/gilroy/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+  /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("styles/fonts/gilroy/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("styles/fonts/gilroy/Gilroy-Black.ttf") format("truetype");
+  font-weight: 900;
+  /* Black */
+  font-style: bold;
 }

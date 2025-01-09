@@ -12,10 +12,10 @@ import whatsapp from "../assets/header/whatsapp.png";
 const Header = () => {
   return (
     <div
-      className="hidden sm:flex justify-between px-16 py-6"
+      className="hidden sm:flex justify-center px-16 py-6"
       style={{ fontFamily: "Gilroy-Medium" }}
     >
-      <div className="flex flex-wrap md:space-x-14 lg:space-x-2">
+      <div className="flex w-[75%]  flex-wrap md:space-x-14 lg:space-x-2">
         <p className="flex items-center space-x-1 text-xs">
           <span>
             <Link

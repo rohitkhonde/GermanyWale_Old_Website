@@ -1,0 +1,97 @@
+.name-m {
+  font-family: Gilroy;
+  font-size: 24.3px;
+  font-weight: 700;
+  line-height: 30.08px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.role-m {
+  font-family: "Gilroy";
+  font-size: 10.8px;
+  font-weight: 800;
+  /* line-height: 13.23px; */
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: black;
+}
+
+.company-m {
+  font-family: "Gilroy";
+  font-size: 14.71px;
+  font-weight: 300;
+  /* line-height: 10.57px; */
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: black;
+  padding-top: 10px;
+}
+
+.m1-heading {
+  font-family: Gilroy;
+  font-size: 134.99px;
+  /* Default for larger screens */
+  font-weight: 900;
+  line-height: 196.87px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffd9b17a;
+}
+
+.m2-heading {
+  font-family: Gilroy;
+  font-size: 40px;
+  /* Default for larger screens */
+  font-weight: 400;
+  line-height: 78.4px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  position: relative;
+  top: -45px;
+  color: #d63715;
+  margin-top: 40px;
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 768px) {
+  .m1-heading {
+    font-size: 7px;
+    /* Scale down font size */
+    line-height: 60px;
+    /* Adjust line height */
+  }
+
+  .m2-heading {
+    font-size: 48px;
+    /* Scale down font size */
+    line-height: 36px;
+    /* Adjust line height */
+    top: -20px;
+    /* Reduce offset */
+  }
+}
+
+@media (max-width: 468px) {
+  .m1-heading {
+    font-size: 48px;
+    /* Further scale down font size */
+    line-height: 48px;
+    /* Adjust line height */
+  }
+
+  .m2-heading {
+    font-size: 28px;
+    /* Further scale down font size */
+    line-height: 28px;
+    /* Adjust line height */
+    top: -30px;
+    /* Further reduce offset */
+  }
+}

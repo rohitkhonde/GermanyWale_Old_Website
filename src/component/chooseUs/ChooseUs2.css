@@ -1,0 +1,641 @@
+.choose-us-container {
+  display: block;
+  height: 1000px;
+  background: white;
+  padding: 0px 160px 0px 160px;
+}
+
+.choose-us-heading-outer-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.choose-us-heading-1 {
+  font-family: Gilroy;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 29px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ff9422;
+  position: relative;
+  height: 29px;
+  top: 107px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: "Gilroy";
+  font-size: 134px;
+  /* Responsive font size based on viewport width */
+  font-weight: 900;
+  line-height: 1.2em;
+  /* Adjust line height */
+  letter-spacing: 0.01em;
+  color: rgba(255, 217, 177, 0.7);
+}
+
+.choose-us-heading-2 {
+  position: relative;
+  /* width: 908px; */
+  /* height: 29px; */
+  top: 163px;
+  gap: 0px;
+  color: #d63715;
+  font-family: "Gilroy";
+  font-size: 32px;
+  /* Responsive font size for smaller heading */
+  font-weight: 700;
+  line-height: 1.5em;
+  color: #d63715;
+  /* top: 200px; */
+}
+
+.choose-us-card-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* gap: 48px; */
+  /* padding: 0 40px; */
+  top: 370px;
+  z-index: 10;
+  gap: 30px;
+  /* left: 10px; */
+  /* margin: 0 20px; */
+}
+
+.card-container {
+  position: relative;
+  width: 400px;
+  height: 243px;
+  perspective: 1000px;
+  /* Adds 3D effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 0 20px; */
+  box-sizing: border-box;
+}
+
+.card-common,
+.card-back {
+  position: absolute;
+  width: 368px;
+  height: 300px;
+  backface-visibility: hidden;
+  /* Prevent text flipping */
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.6s ease;
+  box-sizing: border-box;
+  color: #ffffff;
+  /* Ensure padding doesn't overflow */
+}
+
+/* Front Side */
+.card-common {
+  background: #ffffff;
+  color: #ffffff;
+  /* box-shadow: 0px 10px 100px 3px white; */
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+/* Back Side */
+.card-back {
+  background: #ea7d06;
+  color: #ffffff;
+  transform: rotateY(180deg);
+  /* Flip it behind */
+}
+
+/* On Hover: Flip the card */
+.card-container:hover .card-common {
+  transform: rotateY(180deg);
+  /* Flip front card out */
+}
+
+.card-container:hover .card-back {
+  transform: rotateY(0deg);
+  /* Flip back card into view */
+}
+
+/* Small Card Styling */
+.small-card {
+  /* position: absolute; */
+  width: 128px;
+  height: 113px;
+  top: -55px;
+  left: 103px;
+  background: #ff9422;
+
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 12;
+}
+
+.icon {
+  font-size: 70px;
+  color: #ffffff;
+}
+
+.icon > svg {
+  width: 70px;
+  height: 70px;
+  color: #ffffff;
+}
+
+/* Small Card Hover Effect */
+.card-container:hover .small-card {
+  background: #ffffff;
+}
+
+.card-container:hover .small-card .icon {
+  color: #ea7d06;
+}
+
+.card-common span {
+  position: relative;
+  z-index: 1;
+  font-family: Gilroy;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 97px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ea7d06;
+  transition: color 0.3s cubic-bezier(0, 0, 0.25, 0.98);
+}
+
+.card-common > .card-content {
+  color: #ea7d06;
+}
+
+.card-common > p {
+  position: relative;
+  z-index: 1;
+  font-family: Gilroy;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 23px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #969696;
+  width: 315px;
+  line-height: 23px;
+}
+
+.card-back span {
+  position: relative;
+  z-index: 1;
+  font-family: Gilroy;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 97px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+  transition: color 0.3s cubic-bezier(0, 0, 0.25, 0.98);
+}
+
+.card-back p {
+  position: relative;
+  z-index: 1;
+  font-family: Gilroy;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 23px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #fff7ee;
+  width: 315px;
+  line-height: 23px;
+}
+
+.card-container > .card-common-2 {
+  color: #ea7d06;
+  background: #ffffff;
+}
+
+.card-common-2 > .small-card {
+  background: #ff9422;
+}
+
+.icon2 > svg {
+  color: #ff9422;
+}
+
+.card-common-2 > .card-content {
+  color: #ea7d06;
+}
+
+.card-common-2 > p {
+  color: #969696;
+}
+
+.card-back > .small-card > svg {
+  width: 70px;
+  height: 70px;
+  color: #ea7d06;
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+  .choose-us-container {
+    height: 1000px;
+    padding: 0;
+  }
+
+  .choose-us-heading-outer-container > .choose-us-heading-2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  .choose-us-card-section {
+    position: relative;
+    display: flex;
+
+    gap: 0px;
+  }
+
+  .card-common {
+    height: 320px;
+    width: 290px;
+    /* margin: 1.2rem; */
+  }
+
+  .card-back {
+    height: 320px;
+    width: 290px;
+    /* margin: 1.2rem; */
+  }
+
+  .card-container > .small-card {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    position: relative;
+    width: 94px;
+    height: 89px;
+    top: -155px;
+    left: 1%;
+    gap: 0px;
+    border-radius: 12px;
+    opacity: 0px;
+    /* z-index: 1; */
+    background: linear-gradient(180deg, #ea7d06 0%, #d63715 100%);
+  }
+
+  .icon {
+    font-size: 50px;
+    /* Adjust size as needed */
+    color: #ffffff;
+    /* White color for the icon */
+    display: inline-block;
+  }
+
+  .card-common > .card-content {
+    font-size: 26px;
+  }
+
+  .card-common > p {
+    font-size: 18px;
+    width: 80%;
+  }
+
+  .card-back > .card-content {
+    font-size: 25px;
+  }
+
+  .card-back > p {
+    font-size: 22px;
+    width: 80%;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .choose-us-container {
+    height: 1000px;
+    padding: 0;
+  }
+
+  .choose-us-heading-outer-container > .choose-us-heading-2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  .choose-us-card-section {
+    position: relative;
+    display: flex;
+
+    gap: 0px;
+  }
+
+  .card-common {
+    height: 320px;
+    width: 290px;
+    /* margin: 1.2rem; */
+  }
+
+  .card-back {
+    height: 320px;
+    width: 290px;
+    /* margin: 1.2rem; */
+  }
+
+  .card-container > .small-card {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    position: relative;
+    width: 94px;
+    height: 89px;
+    top: -155px;
+    left: 1%;
+    gap: 0px;
+    border-radius: 12px;
+    opacity: 0px;
+    /* z-index: 1; */
+    background: linear-gradient(180deg, #ea7d06 0%, #d63715 100%);
+  }
+
+  .icon {
+    font-size: 50px;
+    /* Adjust size as needed */
+    color: #ffffff;
+    /* White color for the icon */
+    display: inline-block;
+  }
+
+  .card-common > .card-content {
+    font-size: 26px;
+  }
+
+  .card-common > p {
+    font-size: 18px;
+    width: 80%;
+  }
+
+  .card-back > .card-content {
+    font-size: 25px;
+  }
+
+  .card-back > p {
+    font-size: 22px;
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .choose-us-container {
+    height: 1700px;
+    padding: 0;
+  }
+
+  .choose-us-heading-outer-container > .choose-us-heading-2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  .choose-us-card-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 120px;
+  }
+
+  .card-common {
+    height: 320px;
+    width: 290px;
+    /* margin: 1.2rem; */
+  }
+
+  .card-back {
+    height: 320px;
+    width: 290px;
+    /* margin: 1.2rem; */
+  }
+
+  .card-container > .small-card {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    position: relative;
+    width: 94px;
+    height: 89px;
+    top: -155px;
+    left: 1%;
+    gap: 0px;
+    border-radius: 12px;
+    opacity: 0px;
+    /* z-index: 1; */
+    background: linear-gradient(180deg, #ea7d06 0%, #d63715 100%);
+  }
+
+  .icon {
+    font-size: 50px;
+    /* Adjust size as needed */
+    color: #ffffff;
+    /* White color for the icon */
+    display: inline-block;
+  }
+
+  .card-common > .card-content {
+    font-size: 26px;
+  }
+
+  .card-common > p {
+    font-size: 18px;
+    width: 80%;
+  }
+
+  .card-back > .card-content {
+    font-size: 25px;
+  }
+
+  .card-back > p {
+    font-size: 22px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .choose-us-container {
+    height: 1700px;
+    padding: 0;
+  }
+
+  .choose-us-heading-outer-container > .choose-us-heading-2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  .choose-us-card-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 120px;
+  }
+
+  .card-common {
+    height: 320px;
+    width: 290px;
+    /* margin: 1.2rem; */
+  }
+
+  .card-back {
+    height: 320px;
+    width: 290px;
+    /* margin: 1.2rem; */
+  }
+
+  .card-container > .small-card {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    position: relative;
+    width: 94px;
+    height: 89px;
+    top: -155px;
+    left: 1%;
+    gap: 0px;
+    border-radius: 12px;
+    opacity: 0px;
+    /* z-index: 1; */
+    background: linear-gradient(180deg, #ea7d06 0%, #d63715 100%);
+  }
+
+  .icon {
+    font-size: 50px;
+    /* Adjust size as needed */
+    color: #ffffff;
+    /* White color for the icon */
+    display: inline-block;
+  }
+
+  .card-common > .card-content {
+    font-size: 26px;
+  }
+
+  .card-common > p {
+    font-size: 18px;
+    width: 80%;
+  }
+
+  .card-back > .card-content {
+    font-size: 25px;
+  }
+
+  .card-back > p {
+    font-size: 22px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 468px) {
+  .choose-us-container {
+    height: 1600px;
+    /* padding: 10px; */
+  }
+
+  .choose-us-heading-outer-container {
+    position: relative;
+  }
+
+  .choose-us-heading-outer-container > .choose-us-heading-1 {
+    font-size: 48px;
+    padding-top: 0px;
+  }
+
+  .choose-us-heading-outer-container > .choose-us-heading-2 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 0px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    top: 140px;
+  }
+
+  .choose-us-card-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .choose-us-card-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    top: 270px;
+    z-index: 10;
+    gap: 120px;
+    right: 15px;
+    /* right: -4px; */
+  }
+
+  .card-common > span {
+    font-size: 34px;
+
+    letter-spacing: 0.02em;
+  }
+
+  .icon {
+    font-size: 50px;
+    /* Adjust size as needed */
+    color: #ffffff;
+    /* White color for the icon */
+    display: inline-block;
+  }
+
+  .card2 > .card-content {
+    font-size: 25px;
+  }
+
+  .card-back {
+    height: 320px;
+    width: 290px;
+    /* margin: 1.2rem; */
+  }
+
+  .card-common > p {
+    font-size: 22px;
+    width: 80%;
+  }
+
+  .card-back > .card-content {
+    font-size: 25px;
+  }
+
+  .card-back > p {
+    font-size: 22px;
+    width: 80%;
+  }
+}

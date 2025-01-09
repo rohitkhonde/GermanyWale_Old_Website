@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/Transparency.css";
 import HeroImage from "../assets/image/Herosvg.svg";
-
+import t from "../assets/Transparency/transparency3.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -27,19 +27,15 @@ const Transparency = () => {
             style={{ fontFamily: "Gilroy-Medium" }}
           >
             {" "}
-            Simple, flexible, and powerful. Track all your
-            applications with the convince of your phone
+            Simple, flexible, and powerful. Track all your applications with the
+            convince of your phone
           </p>
         </div>
         <div
           className="flex justify-center "
           style={{ fontFamily: "ZonaPro-Regular" }}
         >
-          <img
-            src={HeroImage}
-            alt="transparencyimg"
-            className="object-cover"
-          />
+          <img src={t} alt="transparencyimg" className="object-cover" />
         </div>
       </div>
     </section>

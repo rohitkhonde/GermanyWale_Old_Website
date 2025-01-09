@@ -5,6 +5,7 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 import { MdPlayArrow } from "react-icons/md";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ns from "../assets/sync/newsync2.jpeg";
 
 const SyncDocument = () => {
   // useEffect
@@ -99,12 +100,10 @@ const SyncDocument = () => {
               </div>
             </div>
 
-            <div className="w-full sm:w-[60%]">
-              <img
-                src={rightMobile}
-                alt="right"
-                className="object-fill"
-              />
+            <div className="w-full sm:w-[60%] bg-white flex items-center justify-center">
+              <div className="bg-white p-2">
+                <img src={ns} alt="right" className="object-fill" />
+              </div>
             </div>
           </div>
         </div>
