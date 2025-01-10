@@ -747,7 +747,7 @@ const StudyGermany = () => {
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Flag_map_of_Germany.svg/665px-Flag_map_of_Germany.svg.png" // Replace this with your image URL
           alt="Centered Logo"
-          className="w-36 h-36 object-cover"
+          className="w-36 h-24 object-contain"
         />
       </div>
     </>
