@@ -1,0 +1,253 @@
+.about-container {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url("abouthero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+  color: white;
+  font-size: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Journey Section */
+.journey-section {
+  padding: 4rem 2rem;
+  background-color: white;
+}
+
+@media (min-width: 768px) {
+  .journey-section {
+    padding: 4rem 8rem;
+  }
+}
+
+.journey-title {
+  text-align: center;
+
+  margin-bottom: 3rem;
+  font-family: Gilroy;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 75px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  background: linear-gradient(89.62deg, #ea7d06 7.15%, #d63715 84.5%);
+  -webkit-background-clip: text; /* Chrome, Safari */
+  background-clip: text; /* For other browsers */
+  color: transparent; /* Make the text color transparent */
+}
+
+@media (min-width: 768px) {
+  .journey-title {
+    font-size: 2.5rem;
+  }
+}
+
+.mission-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .mission-container {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+
+.mission-left {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .mission-left {
+    flex: 1;
+  }
+}
+
+.mission-left h3 {
+  font-size: 1.8rem;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .mission-left h3 {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+}
+
+.mission-right {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .mission-right {
+    flex: 2;
+  }
+}
+
+.mission-right p {
+  color: #333;
+  text-align: left;
+  width: 100%;
+  font-family: Gilroy;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 37px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+@media (min-width: 768px) {
+  .mission-right p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Vision Section */
+.vision-section {
+  background-image: url("lastabout2.png");
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+  position: relative;
+  margin-bottom: 1px;
+}
+
+@media (min-width: 768px) {
+  .vision-section {
+    padding: 4rem 8rem;
+  }
+}
+
+.vision-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.vision-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .vision-content {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+
+.vision-left {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .vision-left {
+    flex: 1;
+  }
+}
+
+.vision-left h3 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .vision-left h3 {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+}
+
+.vision-right {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .vision-right {
+    flex: 2;
+  }
+}
+
+.vision-right p {
+  font-family: Gilroy;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.6;
+  color: white;
+  text-align: left;
+  width: 100%;
+  line-height: 37px;
+}
+
+@media (min-width: 768px) {
+  .vision-right p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Additional Mobile Responsiveness */
+@media (max-width: 480px) {
+  .hero-text {
+    font-size: 2.5rem;
+  }
+
+  .hero-section {
+    height: 300px;
+  }
+
+  .journey-section,
+  .vision-section {
+    padding: 2rem 1rem;
+  }
+
+  .journey-title {
+    font-size: 1.8rem;
+  }
+
+  .mission-left h3,
+  .vision-left h3 {
+    font-size: 1.5rem;
+  }
+
+  .mission-right p,
+  .vision-right p {
+    font-size: 0.95rem;
+  }
+}

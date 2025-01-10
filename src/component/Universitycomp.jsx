@@ -216,7 +216,7 @@ const Universitycomp = () => {
     <div className="px-6 md:px-12 lg:px-24 xl:px-32 bg-white mt-8 mb-8">
       <section className="max-w-[1400px] mx-auto">
         <h3
-          className="text-4xl sm:text-4xl font-bold mb-14  bg-gradient-to-r from-[#fff942] via-[#d63715] to-[#d63815] bg-clip-text text-transparent"
+          className="text-4xl sm:text-4xl font-bold mb-14  bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent"
           style={{ fontFamily: "Gilroy", fontWeight: "600" }}
         >
           Top Universities
@@ -233,12 +233,12 @@ const Universitycomp = () => {
               {universities.map((university, index) => (
                 <div
                   key={index}
-                  className="h-12 px-4 flex items-center justify-center hover:scale-110 transition-transform duration-300"
+                  className="h-14 px-4 flex items-center justify-center hover:scale-110 transition-transform duration-300"
                 >
                   <img
                     src={university.logo}
                     alt={university.name}
-                    className="h-full w-auto object-contain filter hover:grayscale-0 transition-all duration-300"
+                    className="h-full  w-auto object-contain filter hover:grayscale-0 transition-all duration-300"
                   />
                 </div>
               ))}

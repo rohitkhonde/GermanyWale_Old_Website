@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/Transparency.css";
 import HeroImage from "../assets/image/Herosvg.svg";
-import t from "../assets/Transparency/transparency3.png";
+import t from "../assets/Transparency/transparency4.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 

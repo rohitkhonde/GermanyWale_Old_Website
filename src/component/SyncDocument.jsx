@@ -5,7 +5,7 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 import { MdPlayArrow } from "react-icons/md";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import ns from "../assets/sync/newsync2.jpeg";
+import ns from "../assets/sync/newsync3.png";
 
 const SyncDocument = () => {
   // useEffect

@@ -202,7 +202,7 @@ const StudyGermany = () => {
       >
         <div className="text-left">
           <h3
-            className="text-3xl sm:text-3xl font-bold mt-4 mb-14 overflow-hidden bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-center "
+            className="text-3xl sm:text-4xl font-bold mt-4 mb-14 overflow-hidden bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-center "
             style={{ fontFamily: "Gilroy" }}
           >
             Study In Germany With Us
@@ -745,7 +745,7 @@ const StudyGermany = () => {
       </div>
       <div className="min-h-[10px] flex items-center justify-center bg-white">
         <img
-          src={gl} // Replace this with your image URL
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Flag_map_of_Germany.svg/665px-Flag_map_of_Germany.svg.png" // Replace this with your image URL
           alt="Centered Logo"
           className="w-36 h-36 object-cover"
         />

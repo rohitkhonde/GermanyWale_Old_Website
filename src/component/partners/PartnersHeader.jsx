@@ -11,7 +11,7 @@ const PartnersHeader = () => (
         WebkitTextFillColor: "transparent",
       }}
     >
-      OUR PARTNERS
+      Our Partners
     </h2>
     <p
       className=" text-center p-header-des"
