@@ -135,7 +135,7 @@ const TestimonialsSlider = () => {
         The Trust We've Earned
       </h2> */}
       <header
-        className="text-center mt-6 text-3xl font-bold md:text-4xl bg-gradient-to-r from-[#fff942] via-[#d63715] to-[#d63815] bg-clip-text text-transparent"
+        className="text-center mt-6 text-3xl font-bold md:text-4xl  bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent"
         style={{
           color: "#D63715",
         }}
