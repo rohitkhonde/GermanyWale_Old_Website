@@ -23,7 +23,7 @@ const Usp = () => {
             Why Choose Us
           </h3> */}
           <p
-            className="text-xl sm:text-4xl  font-semibold bg-gradient-to-r from-[#fff942] via-[#d63715] to-[#d63815] bg-clip-text text-transparent"
+            className="text-2xl sm:text-4xl  font-semibold  bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent"
             style={{ fontFamily: "Gilroy-Medium" }}
           >
             Endless Possibilities Begin Here

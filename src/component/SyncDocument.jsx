@@ -24,7 +24,7 @@ const SyncDocument = () => {
             <div className="w-full sm:w-[40%] ms-2 sm:ms-10 mt-0 sm:mt-10">
               <div className="flex mb-3 ">
                 <div
-                  className="text-left text-lg sm:text-3xl font-bold mt-4 mb-4 overflow-hidden bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent"
+                  className="text-left text-2xl sm:text-4xl font-bold mt-4 mb-4 overflow-hidden bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent"
                   style={{ fontFamily: "Gilroy" }}
                 >
                   Sync All Documents In The Cloud
@@ -87,7 +87,7 @@ const SyncDocument = () => {
                   And a lot more
                 </div>
               </div>
-              <div className="flex justify-center sm:justify-start mt-8">
+              {/* <div className="flex justify-center sm:justify-start mt-8">
                 <button
                   className="relative bg-gradient-to-r from-[#fbebe8] via-[#fbebe8] to-[#fbebe8] text-[#EA7D06] border-2 border-[#EA7D06] px-3 py-1 sm:px-3 sm:py-2 lg:px-6 lg:py-2 rounded-lg font-semibold text-sm sm:text-[1rem] hover:bg-gradient-to-r hover:from-[#ea7d06] hover:via-[#DF3C19] hover:to-[#DF3C19] hover:text-white hover:border-none"
                   style={{
@@ -97,7 +97,7 @@ const SyncDocument = () => {
                 >
                   Explore More
                 </button>
-              </div>
+              </div> */}
             </div>
 
             <div className="w-full sm:w-[60%] bg-white flex items-center justify-center">

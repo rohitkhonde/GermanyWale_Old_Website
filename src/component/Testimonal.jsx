@@ -220,7 +220,7 @@ function Testimonal() {
             <div className="flex justify-center items-center px-2 sm:px-5">
               <div className="text-center w-[100%]">
                 <h3
-                  className="text-4xl  sm:text-3xl font-bold mt-4 mb-4 overflow-hidden bg-gradient-to-r from-[#fff942] via-[#d63715] to-[#d63815] bg-clip-text text-transparent"
+                  className="text-2xl  sm:text-4xl font-bold mt-4 mb-4 overflow-hidden  bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent"
                   style={{ fontFamily: "Gilroy" }}
                 >
                   What Our Student Speak

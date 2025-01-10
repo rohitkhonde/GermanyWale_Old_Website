@@ -7,6 +7,7 @@ import "../styles/Footer.css";
 import germany from "../assets/image/germanylogo.png";
 import location from "../assets/image/location.svg";
 import inbox from "../assets/image/inbox.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -27,18 +28,18 @@ const Footer = () => {
                 />
               </div>
               <div className="flex space-x-4 ">
-                <a href="#" className="text-3xl">
+               <Link to="/" className="text-3xl">
                   <FaInstagram />
-                </a>
-                <a href="#" className="text-3xl">
+                </Link>
+               <Link to="/" className="text-3xl">
                   <FaFacebookF />
-                </a>
-                <a href="#" className="text-3xl">
+                </Link>
+               <Link to="/" className="text-3xl">
                   <FaLinkedin />
-                </a>
-                <a href="#" className="text-3xl">
+                </Link>
+               <Link to="/" className="text-3xl">
                   <RiYoutubeLine />
-                </a>
+                </Link>
               </div>
               <div className="text-left py-4 px-4">
                 <div className="flex gap-3 items-center">
@@ -69,16 +70,16 @@ const Footer = () => {
                 style={{ fontFamily: "Gilroy-Medium" }}
               >
                 <li>
-                  <a href="#">Bachelor in Germany</a>
+                  <Link to="/contact">Bachelor in Germany</Link>
                 </li>
                 <li>
-                  <a href="#">Masters in Germany</a>
+                  <Link to="/contact">Masters in Germany</Link>
                 </li>
                 <li>
-                  <a href="#">PhD in Germany</a>
+                  <Link to="/contact">PhD in Germany</Link>
                 </li>
                 <li>
-                  <a href="#">MBA in Germany</a>
+                  <Link to="/contact">MBA in Germany</Link>
                 </li>
               </ul>
             </div>
@@ -95,16 +96,16 @@ const Footer = () => {
                 style={{ fontFamily: "Gilroy-Medium" }}
               >
                 <li>
-                  <a href="#">Study Visa</a>
+                  <Link to="/visa">Study Visa</Link>
                 </li>
                 <li>
-                  <a href="#">Accomodation</a>
+                  <Link to="/accomodation">Accomodation</Link>
                 </li>
                 <li>
-                  <a href="#">Service in Germany</a>
+                  <Link to="/study-germany">Service in Germany</Link>
                 </li>
                 <li>
-                  <a href="#">Service in India</a>
+                  <Link to="/contact">Service in India</Link>
                 </li>
               </ul>
             </div>
@@ -122,16 +123,16 @@ const Footer = () => {
                 style={{ fontFamily: "Gilroy-Medium" }}
               >
                 <li>
-                  <a href="#">About</a>
+                  <Link to="/about">About</Link>
                 </li>
                 <li>
-                  <a href="/contact">Contact</a>
+                  <Link to="/contact">Contact</Link>
                 </li>
                 <li>
-                  <a href="#">Privacy Policies</a>
+                  <Link to="/contact">Privacy Policies</Link>
                 </li>
                 <li>
-                  <a href="#">Refund Policies</a>
+                  <Link to="/contact">Refund Policies</Link>
                 </li>
               </ul>
             </div>
@@ -140,13 +141,9 @@ const Footer = () => {
             {/* <div className="flex items-center">
           </div> */}
             <div className="m-auto mb-0 sm:mb-2 md:mb-0 w-[40%] sm:w-max">
-              <div className="flex flex-wrap items-center border border-[#FFFFFF] rounded-3xl p-1 sm:p-4 mb-2">
+              {/* <div className="flex flex-wrap items-center border border-[#FFFFFF] rounded-3xl p-1 sm:p-4 mb-2">
                 <div className="m-auto sm:m-0">
-                  <img
-                    src={qrCode}
-                    alt="qr"
-                    className="m-auto qrimage"
-                  />
+                  <img src={qrCode} alt="qr" className="m-auto qrimage" />
                 </div>
                 <div className="m-auto sm:m-0">
                   <h4
@@ -155,36 +152,34 @@ const Footer = () => {
                   >
                     Get in Touch
                   </h4>
-                  <h2 className="text-md sm:text-xl font-semibold">
-                    NOW
-                  </h2>
+                  <h2 className="text-md sm:text-xl font-semibold">NOW</h2>
                 </div>
-              </div>
+              </div> */}
               <div className="flex space-x-4 justify-center text-[#969696]">
-                <a
-                  href="https://www.instagram.com/germanywale_official/"
+                <Link
+                  to="https://www.instagram.com/germanywale_official/"
                   className="text-2xl"
                 >
                   <FaInstagram />
-                </a>
-                <a
-                  href="https://www.facebook.com/germanywale.official"
+                </Link>
+                <Link
+                  to="https://www.facebook.com/germanywale.official"
                   className="text-2xl"
                 >
                   <FaFacebookF />
-                </a>
-                <a
-                  href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHew-hMvUKd_AAAAY9ZN_rAu07_INrQoBX1IS_axiVStOj7Rt82XwhOLyqcUD-9UsbIQXYfQgN91Rgj-Ppc_5wVr7PGLQX-Hu2xZytqGVC390b8PuSeULKEPU01oudMFB57120=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2F35885346%2Fadmin%2Ffeed%2Fposts%2F"
+                </Link>
+                <Link
+                  to="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHew-hMvUKd_AAAAY9ZN_rAu07_INrQoBX1IS_axiVStOj7Rt82XwhOLyqcUD-9UsbIQXYfQgN91Rgj-Ppc_5wVr7PGLQX-Hu2xZytqGVC390b8PuSeULKEPU01oudMFB57120=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2F35885346%2Fadmin%2Ffeed%2Fposts%2F"
                   className="text-2xl"
                 >
                   <FaLinkedin />
-                </a>
-                <a
-                  href="https://www.youtube.com/@germanywale_official"
+                </Link>
+                <Link
+                  to="https://www.youtube.com/@germanywale_official"
                   className="text-2xl"
                 >
                   <RiYoutubeLine />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -200,11 +195,7 @@ const Footer = () => {
                 Copyrights reserved Germanywale, All rights reserved
               </div>
               <div className="text-[#A2A1A1] flex">
-                <img
-                  src={germany}
-                  alt="flag"
-                  className="h-4 me-0 sm:me-2"
-                />
+                <img src={germany} alt="flag" className="h-4 me-0 sm:me-2" />
                 <span className="text-xs sm:text-md ms-1">
                   Neckarstrasse 44, 64625-Bensheim,Hessen,Germany
                 </span>

@@ -14,7 +14,7 @@ import "./University.css";
 import ui from "../../../assets/ServicePageImages/UniversityImage/universityPageimage.jpg";
 // import Universities from "../../../Universities";
 import Universitycomp from "../../Universitycomp";
-import ac from "../../../assets/ServicePageImages/UniversityImage/university.png";
+import ac from "../../../assets/ServicePageImages/UniversityImage/university3.jpg";
 
 const services = [
   {
@@ -69,7 +69,7 @@ const University = () => {
       <div className="relative h-[300px] sm:h-[350px] md:h-[391px] lg:h-[450px] ">
         {/* Orange Gradient Overlay */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0  bg-cover bg-center  bg-no-repeat"
           style={{
             backgroundImage: `url(${ac})`,
           }}

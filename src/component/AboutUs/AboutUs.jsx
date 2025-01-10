@@ -6,7 +6,7 @@ function AboutUs() {
     <div className="about-container">
       {/* Hero Section */}
       <div className="hero-section">
-        <h1 className="hero-text">About Us</h1>
+        <h1 className="hero-text text-2xl sm:text-4xl">About Us</h1>
       </div>
 
       {/* Journey Section */}

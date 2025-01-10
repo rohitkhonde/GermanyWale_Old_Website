@@ -1,0 +1,9 @@
+@media (min-width: 320px) and (max-width: 480px) {
+  .mobile-view-flag {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    margin-right: 300px;
+    /* padding-bottom: 80px; */
+  }
+}

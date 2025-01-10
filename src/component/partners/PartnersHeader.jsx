@@ -4,8 +4,10 @@ import "./partner.css";
 const PartnersHeader = () => (
   <div className="flex flex-col items-center w-full max-w-12xl gap-4 px-4">
     <h2
-      className="  partners-header  p-header"
+      className="text-2xl sm:text-5xl font-bold"
       style={{
+        fontFamily: "Gilroy",
+
         background: "linear-gradient(90deg, #EA7D06 0%, #D63715 100%)",
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",
@@ -14,11 +16,11 @@ const PartnersHeader = () => (
       Our Partners
     </h2>
     <p
-      className=" text-center p-header-des"
+      className=" text-center text-lg sm:text-lg "
       style={{
         fontFamily: "Gilroy",
-        fontWeight: 400,
-        lineHeight: "1.5",
+        fontWeight: 600,
+
         textAlign: "center",
         color: "#E0E0E0",
         maxWidth: "900px",

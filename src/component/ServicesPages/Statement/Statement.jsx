@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 // import "./University.css";
 import ui from "../../../assets/ServicePageImages/Statement/st.jpg";
-import ac from "../../../assets/ServicePageImages/Statement/statement.jpeg";
+import ac from "../../../assets/ServicePageImages/Statement/st3.jpg";
 // import Universities from "../../../Universities";
 
 const services = [

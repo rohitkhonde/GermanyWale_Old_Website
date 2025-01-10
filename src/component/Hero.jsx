@@ -63,7 +63,10 @@ const Hero = () => {
                     guaranteed admission
                   </p>
                 </div> */}
-                <div className="" style={{ fontFamily: "Gilroy-Regular" }}>
+                <div
+                  className="desktop-view"
+                  style={{ fontFamily: "Gilroy-Regular" }}
+                >
                   <p className="text-sm sm:text-md">
                     Our students finished University to work at{" "}
                     <span className="text-[#e27c00]">global offices</span> of
@@ -71,12 +74,21 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className="flex items-center justify-center md:justify-start ml-2 sm:mb-0">
+              <div className=" mobile-view-div flex flex-col items-center justify-center md:justify-start ml-2 sm:mb-0">
                 <img
                   src={coverimage}
                   alt="coverimage"
                   className="w-full lg:h-80 xl:h-96 object-fill"
                 />
+                <div
+                  className="mobile-view"
+                  style={{ fontFamily: "Gilroy-Regular" }}
+                >
+                  <p className="text-sm sm:text-md">
+                    Our students finished University to work at{" "}
+                    <span className="text-[#e27c00]">global offices</span> of
+                  </p>
+                </div>
               </div>
             </div>
             <div

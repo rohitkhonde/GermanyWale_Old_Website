@@ -216,8 +216,8 @@ const Universitycomp = () => {
     <div className="px-6 md:px-12 lg:px-24 xl:px-32 bg-white mt-8 mb-8">
       <section className="max-w-[1400px] mx-auto">
         <h3
-          className="text-4xl sm:text-4xl font-bold mb-14  bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent"
-          style={{ fontFamily: "Gilroy", fontWeight: "600" }}
+          className="text-2xl sm:text-4xl font-bold mb-14  bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent"
+          style={{ fontFamily: "Gilroy" }}
         >
           Top Universities
         </h3>

@@ -14,12 +14,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className="bg-[#FFFFFF] shadow-md text-black sticky top-0 z-40"
-      style={{
-        fontFamily: "Gilroy",
-      }}
+      className="bg-[#FFFFFF] text-black sticky top-0 shadow-md shadow-[#ff9422d3]"
+      style={{ zIndex: "40" }}
     >
-      <div className="container mx-auto px-4 py-2 sm:py-1 flex justify-between items-center lg:px-14">
+      <div className="container mx-auto px-4 py-2 sm:py-1 flex justify-between items-center lg:px-14 ">
         <div className="flex items-center">
           <Link to="/">
             <img
@@ -30,7 +28,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div
-          className="hidden md:flex space-x-4 sm:space-x-14"
+          className="hidden md:flex space-x-4 sm:space-x-14 "
           style={{
             fontFamily: "Gilroy",
           }}
@@ -66,20 +64,23 @@ const Navbar = () => {
             Contact Us
           </Link>
         </div>
-        <div className="md:hidden flex items-center space-x-4">
-          <a href={`tel:+917219849834`}>
-            <IoIosCall className="text-black text-xl sm:text-2xl" />
-          </a>
+        <div className="md:hidden">
           {isOpen ? (
             <FaTimes
               onClick={toggleMenu}
               className="text-black text-xl sm:text-2xl"
             />
           ) : (
-            <FaBars
-              onClick={toggleMenu}
-              className="text-black text-xl sm:text-2xl"
-            />
+            <div className="flex space-x-4">
+              <a href={`tel:+917219849834`}>
+                <IoIosCall className="text-black text-xl sm:text-2xl" />
+              </a>
+
+              <FaBars
+                onClick={toggleMenu}
+                className="text-black text-xl sm:text-2xl"
+              />
+            </div>
           )}
         </div>
       </div>
@@ -97,7 +98,7 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="/news"
+            to="/about"
             className="block px-4 py-2 text-sm hover:text-orange-300"
             onClick={toggleMenu} // Close menu on click
           >

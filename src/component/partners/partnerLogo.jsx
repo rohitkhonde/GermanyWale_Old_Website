@@ -40,7 +40,7 @@ const PartnerLogo = ({ logo, name }) => (
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#1A1A1A", // Optional: add a background for contrast
+        backgroundColor: "black", // Optional: add a background for contrast
       }}
       className="front-div"
     >

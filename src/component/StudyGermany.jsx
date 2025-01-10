@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import "../styles/studyGermany.css";
 
 // images
 import freecounselling from "../assets/testi/studysec/Free Counselling.svg";
@@ -202,7 +203,7 @@ const StudyGermany = () => {
       >
         <div className="text-left">
           <h3
-            className="text-3xl sm:text-4xl font-bold mt-4 mb-14 overflow-hidden bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-center "
+            className="text-2xl sm:text-4xl font-bold mt-4 mb-14 overflow-hidden  bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent text-center "
             style={{ fontFamily: "Gilroy" }}
           >
             Study In Germany With Us
@@ -230,7 +231,7 @@ const StudyGermany = () => {
               </div>
               <div className="text-left ms-2 mt-2">
                 <h4
-                  className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-2xl mb-2"
+                  className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-xl mb-2"
                   style={{ fontFamily: "Gilroy", fontWeight: "600" }}
                 >
                   Free Counselling
@@ -259,7 +260,7 @@ const StudyGermany = () => {
                     letterSpacing: "0.6px",
                   }}
                 >
-                  <Link to="/university"> Explore More</Link>
+                  <Link to="/contact"> Explore More</Link>
                 </button>
               </div>
             </div>
@@ -278,7 +279,7 @@ const StudyGermany = () => {
               </div>
               <div className="text-left ms-2 mt-2 ">
                 <h4
-                  className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-2xl mb-2"
+                  className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-xl mb-2"
                   style={{ fontFamily: "Gilroy", fontWeight: "600" }}
                 >
                   University Shortlisting
@@ -338,7 +339,7 @@ const StudyGermany = () => {
               </div>
               <div className="text-left ms-2 mt-2">
                 <h4
-                  className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-2xl  mb-2"
+                  className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-xl  mb-2"
                   style={{ fontFamily: "Gilroy", fontWeight: "600" }}
                 >
                   Statement of purpose
@@ -385,7 +386,7 @@ const StudyGermany = () => {
               </div>
               <div className="text-left ms-2 mt-2">
                 <h4
-                  className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-2xl mb-2"
+                  className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-xl mb-2"
                   style={{ fontFamily: "Gilroy", fontWeight: "600" }}
                 >
                   Curriculum Vitae
@@ -446,7 +447,7 @@ const StudyGermany = () => {
               </div>
               <div className="text-left ms-2 mt-2">
                 <h4
-                  className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-2xl  mb-2"
+                  className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-xl  mb-2"
                   style={{ fontFamily: "Gilroy", fontWeight: "600" }}
                 >
                   Letter of recommendation
@@ -493,7 +494,7 @@ const StudyGermany = () => {
               </div>
               <div className="text-left ms-2 mt-2">
                 <h4
-                  className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-2xl mb-2"
+                  className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-xl mb-2"
                   style={{ fontFamily: "Gilroy", fontWeight: "600" }}
                 >
                   University Application
@@ -545,7 +546,7 @@ const StudyGermany = () => {
               </div>
               <div className="text-left ms-2 mt-2">
                 <h4
-                  className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-2xl mb-2"
+                  className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-xl mb-2"
                   style={{ fontFamily: "Gilroy", fontWeight: "600" }}
                 >
                   Visa Assistance
@@ -593,7 +594,7 @@ const StudyGermany = () => {
               </div>
               <div className="text-left ms-2 mt-2 ">
                 <h4
-                  className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-2xl mb-2"
+                  className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] bg-clip-text text-transparent text-xl mb-2"
                   style={{ fontFamily: "Gilroy", fontWeight: "600" }}
                 >
                   Accomodation and travel assistance
@@ -743,7 +744,7 @@ const StudyGermany = () => {
           )}
         </div>
       </div>
-      <div className="min-h-[10px] flex items-center justify-center bg-white">
+      <div className="mobile-view-flag min-h-[10px] flex items-center justify-center bg-white">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Flag_map_of_Germany.svg/665px-Flag_map_of_Germany.svg.png" // Replace this with your image URL
           alt="Centered Logo"
