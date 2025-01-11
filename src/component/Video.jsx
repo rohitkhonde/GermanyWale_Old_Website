@@ -4,9 +4,21 @@ const Video = () => {
   const videoRef = useRef(null);
 
   useEffect(() => {
-    if (videoRef.current) {
-      // Set the video to start at 3 seconds
-      videoRef.current.currentTime = 3;
+    const video = videoRef.current;
+    if (video) {
+      const handleCanPlay = () => {
+        // Set the video to start at 3 seconds
+        video.currentTime = 3;
+        video.play(); // Automatically play the video
+      };
+
+      // Add event listener to ensure `currentTime` is set after metadata is loaded
+      video.addEventListener("canplay", handleCanPlay);
+
+      return () => {
+        // Cleanup event listener
+        video.removeEventListener("canplay", handleCanPlay);
+      };
     }
   }, []);
 

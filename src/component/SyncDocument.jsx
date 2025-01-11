@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "../styles/SyncDocument.css";
 import rightMobile from "../assets/sync/mobilescreen.png";
 import { IoIosCheckmarkCircle } from "react-icons/io";
-import { MdPlayArrow } from "react-icons/md";
+import { MdDonutSmall, MdPlayArrow } from "react-icons/md";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ns from "../assets/sync/newsync3.png";
@@ -32,7 +32,7 @@ const SyncDocument = () => {
               </div>
               <div className="flex mb-1 ">
                 <div className="syncText">
-                  <MdPlayArrow className="syncTextIcon" />
+                  <MdDonutSmall className="syncTextIcon" />
                 </div>
 
                 <div
@@ -45,7 +45,7 @@ const SyncDocument = () => {
 
               <div className="flex mb-1">
                 <div className="syncText">
-                  <MdPlayArrow className="syncTextIcon" />
+                  <MdDonutSmall className="syncTextIcon" />
                 </div>
                 <div
                   className="text-sm sm:text-lg text-left"
@@ -56,7 +56,7 @@ const SyncDocument = () => {
               </div>
               <div className="flex mb-1">
                 <div className="syncText">
-                  <MdPlayArrow className="syncTextIcon" />
+                  <MdDonutSmall className="syncTextIcon" />
                 </div>
                 <div
                   className="text-sm sm:text-lg text-left"
@@ -67,7 +67,7 @@ const SyncDocument = () => {
               </div>
               <div className="flex mb-1">
                 <div className="syncText">
-                  <MdPlayArrow className="syncTextIcon" />
+                  <MdDonutSmall className="syncTextIcon" />
                 </div>
                 <div
                   className="text-sm sm:text-lg text-left"
@@ -78,7 +78,7 @@ const SyncDocument = () => {
               </div>
               <div className="flex mb-1">
                 <div className="syncText">
-                  <MdPlayArrow className="syncTextIcon" />
+                  <MdDonutSmall className="syncTextIcon" />
                 </div>
                 <div
                   className="text-sm sm:text-lg text-left"

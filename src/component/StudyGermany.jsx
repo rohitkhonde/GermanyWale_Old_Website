@@ -743,7 +743,7 @@ const StudyGermany = () => {
           )}
         </div>
       </div>
-      <div className="mobile-view-flag min-h-[10px] flex items-center justify-center bg-white">
+      <div className="mobile-view-flag relative top-[-40px] min-h-[10px] flex items-center justify-center bg-white">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Flag_map_of_Germany.svg/665px-Flag_map_of_Germany.svg.png" // Replace this with your image URL
           alt="Centered Logo"

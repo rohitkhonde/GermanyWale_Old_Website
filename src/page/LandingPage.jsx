@@ -52,10 +52,12 @@ const LandingPage = () => {
         {/* <ChooseUs2 /> */}
         <StudyGermany />
         <Transparency />
+        <SyncDocument />
+
         {/* Partners Section */}
         <Partners />
         {/* <Webslider /> */}
-        <SyncDocument />
+        {/* <SyncDocument /> */}
         <MentorSection />
         <StayinTouch />
 
