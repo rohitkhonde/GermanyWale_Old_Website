@@ -16,6 +16,7 @@ import l from "../assets/Hero/l.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { logRoles } from "@testing-library/react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   // useEffect
@@ -47,7 +48,7 @@ const Hero = () => {
                     className="bg-gradient-to-r from-[#ea7d06] via-[#d63815] to-[#d63815] text-[#FFFFFF] rounded-xl px-3 py-2 sm:px-4 sm:py-1 lg:px-5 lg:py-2 font-semibold text-sm sm:text-md"
                     style={{ fontFamily: "Gilroy" }}
                   >
-                    Call for FREE counselling
+                    <Link to="/contact">Call for FREE counselling </Link>
                   </button>
                 </div>
                 {/* <div className="flex items-center mb-3 text-center md:text-left justify-center md:justify-start gap-1">

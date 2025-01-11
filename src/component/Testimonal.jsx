@@ -73,7 +73,8 @@ function Testimonal() {
       para1: "The best part about the Germanywale team is that they don't",
       para2: `treat you as a customer. `,
 
-      videoLink: " ",
+      videoLink:
+        "https://www.instagram.com/p/CXsiGOVvMjI/?igsh=MTEyZ2E5b3Z5b2xqdA==",
       course: "MSc in Data Science",
       university: purvanshiuniversity,
     },
@@ -83,7 +84,7 @@ function Testimonal() {
       para1:
         "Won't lie. Was a little skeptical about Germanywale in the start.",
       para2: `But it proved me wrong in every way possible. `,
-      videoLink: " ",
+      videoLink: "https://www.youtube.com/@germanywale_official/featured",
       course: "MSc in Data Science",
       university: shagununiversity,
     },
@@ -94,7 +95,8 @@ function Testimonal() {
         "The mentors are easy to reach and talk to, the process is simplified ",
       para2: `and their advice on writing SOPs and shortlisting universities.`,
 
-      videoLink: " ",
+      videoLink:
+        "https://www.instagram.com/p/CcpG3vktcIC/?igsh=MWVtazVtN2U3ODl1bA==",
       course: "Masters in Management",
       university: ayushuniversity,
     },
@@ -106,7 +108,8 @@ function Testimonal() {
       para2: `Their advice and service were very genuine. `,
       pricingText: "USD 50/Day",
       course: "Masters in Non-Financials Intensive",
-      videoLink: "",
+      videoLink:
+        "https://www.instagram.com/p/C1Gy9xuLP6J/?igsh=MXkybmt3cDloNjAyYg==",
 
       university: shwetaUniversity,
     },
@@ -117,7 +120,7 @@ function Testimonal() {
         " The whole process was very transparent it marked my expectations.",
       para2: `I was kept well informed about the ongoing developments.`,
 
-      videoLink: "https://www.youtube.com/shorts/znoo0fz9ioA",
+      videoLink: "https://youtube.com/shorts/znoo0fz9ioA?si=sCzDbJrLX5DXeDpR",
       university: abhayuniversity,
       course: "Masters in Agriculture, Ecology and Societies",
     },
@@ -128,7 +131,7 @@ function Testimonal() {
         "My experience with Germanywale has been nothing short of my high expectations.",
       para2: ` Their flexibility with assigning mentors is excellent`,
 
-      videoLink: "https://www.youtube.com/watch?v=dTmGfOmDpkk",
+      videoLink: "https://youtu.be/dTmGfOmDpkk?si=PMdvZk4QSdaa98CH",
       university: naveen_university,
       course: "MSc in Biological Resources",
     },
@@ -139,7 +142,7 @@ function Testimonal() {
         "Genuinely I was very worried about my application before joining Germanywale. Team always gives me confidence and assurance",
       para2: `that I will get an admit.`,
 
-      videoLink: "https://www.youtube.com/watch?v=yFigyCOADqQ",
+      videoLink: "https://youtu.be/yFigyCOADqQ?si=kV5zBjVhyc2_gG-v",
       university: akanshauniversity,
       course: "Master's in molecular life science",
     },
@@ -150,7 +153,8 @@ function Testimonal() {
         "I would never forget the key role played by Team Germanywale in university shortlisting. They were available beyond",
       para2: ` the time, no matter what type of concern I have.`,
 
-      videoLink: "",
+      videoLink:
+        "https://www.instagram.com/p/CkRB7KdLhTW/?igsh=bmw5aG56dG15emJu",
       university: taranjituniversity,
       course: "International Management and Leadership (MA)",
     },
@@ -161,7 +165,7 @@ function Testimonal() {
         "Whenever I had a doubt , the team was always there to help me out.",
       para2: ` The team gave me hope and proper guidance and motivated  me a lot to go beyond.`,
 
-      videoLink: "https://www.youtube.com/watch?v=3TiiJCuJHoE",
+      videoLink: "https://youtu.be/3TiiJCuJHoE?si=xMHmDDw8e10lz9uc",
       university: kripaluniversity,
       course: "Masters in Intelligent Manufacturing",
     },
@@ -172,7 +176,7 @@ function Testimonal() {
         "Germanywale provided exceptional support and engagement, promptly ",
       para2: ` addressing all my questions and doubts. Their patience and reliability eased my journey.`,
 
-      videoLink: "https://www.youtube.com/shorts/Lo2OrJkqmR0",
+      videoLink: "https://youtube.com/shorts/Lo2OrJkqmR0?si=iPjX7u43FKzg6HKu",
       university: prasaduniversity,
       course: "Masters in Wind energy Engineering",
     },
@@ -183,7 +187,7 @@ function Testimonal() {
         "Saurabh and the entire team were in touch with me consistently the whole time & were always there  if I had any doubts. I would highly  ",
       para2: `recommend Germanywale to my  everyone.`,
 
-      videoLink: "https://www.youtube.com/watch?v=kYGHHRW0JKA",
+      videoLink: "https://youtu.be/kYGHHRW0JKA?si=CrF9YAbS6DXdlxu2",
       university: arshiyauniversity,
       course:
         "Master's in International Business- Focus on healthcare management",
@@ -195,7 +199,7 @@ function Testimonal() {
         "My entire application process with Germanywale has been extremely smooth.Everyone in",
       para2: ` the team is \n exceptional and very helpful.`,
 
-      videoLink: " ",
+      videoLink: "https://youtube.com/shorts/xVFs-veJimQ?si=Mndtadq8RinUXfCR",
       university: antonyuniversity,
       course: "Master of Business Administration",
     },
@@ -206,7 +210,8 @@ function Testimonal() {
         "Choosing Germanywale for my study abroad journey was the best decision I ever made, as their personalized guidance led me to my",
       para2: ` dream university with immense support.`,
 
-      videoLink: " ",
+      videoLink:
+        "https://www.instagram.com/p/C6lA9JeOWm_/?igsh=MWdybDB5N2N4YWV1dQ==",
       university: shagununiversity,
       course: "Master’s in Electromobility",
     },

@@ -356,9 +356,9 @@ const StudyGermany = () => {
                   className="text-sm mb-3"
                   style={{ fontFamily: "Gilroy-Regular" }}
                 >
-                  Get an Education Loan without Collateral within 3-5 working
-                  days at competitive Interest Rates and clear the financial
-                  hurdle.
+                  Stand out from the crowd with a great professionally assisted
+                  Statement of Purpose, and let us help you in putting your
+                  story into words.
                 </p>
 
                 <button
@@ -403,9 +403,9 @@ const StudyGermany = () => {
                   className="text-sm mb-3"
                   style={{ fontFamily: "Gilroy-Regular" }}
                 >
-                  Send your money abroad securely for University Fees, GIC,
-                  Living Expenses or a Blocked Account at the Lowest Exchange
-                  Rates and fastest processing.
+                  Full assistance from us in tailoring a curriculum vitae
+                  explicitly describing your skills and experiences to cater
+                  your application objective.
                 </p>
 
                 <button
@@ -464,9 +464,9 @@ const StudyGermany = () => {
                   className="text-sm mb-3"
                   style={{ fontFamily: "Gilroy-Regular" }}
                 >
-                  With our Visa Expert, fulfil the Visa application requirements
-                  and apply for the Visa. We have a success rate of more than
-                  95.5% Start Visa Application
+                  Increase your chances of admission by taking our assistance in
+                  vouching for your skills and aptitude for formulating a ‘good’
+                  to ‘great’ Letter of Recommendation.
                 </p>
 
                 <button
@@ -511,9 +511,8 @@ const StudyGermany = () => {
                   className="text-sm mb-3"
                   style={{ fontFamily: "Gilroy-Regular" }}
                 >
-                  Send your money abroad securely for University Fees, GIC,
-                  Living Expenses or a Blocked Account at the Lowest Exchange
-                  Rates and fastest processing.
+                  Our local German team guides you through this entire process
+                  for a smooth and hassle free application step.
                 </p>
 
                 <button
