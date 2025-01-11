@@ -97,7 +97,7 @@ const StudyGermany = () => {
   // Scroll Aeroplane // for web screens
 
   useEffect(() => {
-    if (strokeDashOffset - 400 <= 560 && strokeDashOffset - 400 >= 280) {
+    if (strokeDashOffset - 400 <= 500 && strokeDashOffset - 400 >= 250) {
       console.log("True");
       setIsVisiblescroll(true);
     } else {
