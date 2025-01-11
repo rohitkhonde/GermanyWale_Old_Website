@@ -1,4 +1,6 @@
 import { useState } from "react";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { collection, addDoc } from "firebase/firestore";
 import { auth, db } from "./firebase"; // Adjust the path as necessary
@@ -23,8 +25,19 @@ export default function Google() {
     });
   };
 
+  const handlePhoneChange = (value) => {
+    setFormData({ ...formData, mobile: value });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate mobile number
+    if (!formData.mobile || formData.mobile.length < 10) {
+      alert("Please enter a valid mobile number.");
+      return;
+    }
+
     try {
       // Save form data to Firestore
       await addDoc(collection(db, "contactForm"), formData);
@@ -74,10 +87,7 @@ export default function Google() {
           <h2 className="mb-6 text-2xl font-bold">Contact Us</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label
-                className="block text-left font-semibold text-lg"
-                style={{ fontFamily: "Gilroy" }}
-              >
+              <label className="block text-left font-semibold text-lg">
                 Name
               </label>
               <input
@@ -91,21 +101,25 @@ export default function Google() {
             </div>
 
             <div>
-              <label className="block text-left font-semibold  text-lg">
+              <label className="block text-left font-semibold text-lg">
                 Mobile Number
               </label>
-              <input
-                type="tel"
-                name="mobile"
+              <PhoneInput
+                country={"in"}
                 value={formData.mobile}
-                onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2"
-                required
+                onChange={handlePhoneChange}
+                inputClass="block w-full h-10 px-4 pl-12 text-base text-gray-700 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                containerClass="w-full"
+                buttonStyle={{
+                  background: "transparent",
+                  border: "none",
+                  padding: "0",
+                }}
               />
             </div>
 
             <div>
-              <label className="block text-left font-semibold  text-lg">
+              <label className="block text-left font-semibold text-lg">
                 Email
               </label>
               <input
@@ -119,7 +133,7 @@ export default function Google() {
             </div>
 
             <div>
-              <label className="block text-left font-semibold  text-lg">
+              <label className="block text-left font-semibold text-lg">
                 Degree to Pursue
               </label>
               <select
@@ -130,7 +144,7 @@ export default function Google() {
               >
                 {DEGREE_OPTIONS.map((option) => (
                   <option
-                    className="text-left font-semibold "
+                    className="text-left font-semibold"
                     key={option.value}
                     value={option.value}
                   >
