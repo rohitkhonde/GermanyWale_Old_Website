@@ -72,7 +72,7 @@ const Navbar = () => {
             />
           ) : (
             <div className="flex space-x-4">
-              <a href={`tel:+917219849834`}>
+              <a href={`tel:+917276440061`}>
                 <IoIosCall className="text-black text-xl sm:text-2xl" />
               </a>
 
@@ -112,7 +112,7 @@ const Navbar = () => {
             Services
           </Link>
           <Link
-            to="/testimonials"
+            to="/reviews"
             className="block px-4 py-2 text-sm hover:text-orange-300"
             onClick={toggleMenu} // Close menu on click
           >
