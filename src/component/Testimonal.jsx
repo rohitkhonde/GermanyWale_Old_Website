@@ -226,7 +226,7 @@ function Testimonal() {
               <div className="text-center w-[100%]">
                 <h3
                   className="text-2xl  sm:text-4xl font-bold mt-4 mb-4 overflow-hidden  bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent"
-                  style={{ fontFamily: "Gilroy" }}
+                  style={{ fontFamily: "Gilroy-Medium" }}
                 >
                   What Our Student Speak
                 </h3>

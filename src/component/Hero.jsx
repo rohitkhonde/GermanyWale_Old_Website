@@ -36,7 +36,7 @@ const Hero = () => {
               <div className="text-center lg:text-left pt-4 pb-3 sm:pt-8 sm:pb-0 ">
                 <div
                   className="mb-5"
-                  style={{ fontFamily: "Gilroy", fontWeight: "700" }}
+                  style={{ fontFamily: "Gilroy-Medium", fontWeight: "700" }}
                 >
                   <p className="text-2xl sm:text-3xl mb-3">
                     Empowering dreams of
@@ -66,7 +66,7 @@ const Hero = () => {
                 </div> */}
                 <div
                   className="desktop-view"
-                  style={{ fontFamily: "Gilroy-Regular" }}
+                  style={{ fontFamily: "Gilroy-Medium" }}
                 >
                   <p className="text-sm sm:text-md">
                     Our students finished University to work at{" "}
@@ -83,9 +83,9 @@ const Hero = () => {
                 />
                 <div
                   className="mobile-view"
-                  style={{ fontFamily: "Gilroy-Regular" }}
+                  style={{ fontFamily: "Gilroy-Medium" }}
                 >
-                  <p className="text-sm sm:text-md">
+                  <p className="text-sm sm:text-md ">
                     Our students finished University to work at{" "}
                     <span className="text-[#e27c00]">global offices</span> of
                   </p>
@@ -93,7 +93,7 @@ const Hero = () => {
               </div>
             </div>
             <div
-              className="flex flex-wrap  space-x-4 sm:space-x-4 items-center mt-0 sm:mt-[-1rem] justify-center lg:justify-start xl:relative"
+              className="flex flex-wrap  space-x-10 sm:space-x-4 items-center mt-0 sm:mt-[-1rem] justify-center lg:justify-start xl:relative"
               style={{ top: "-40px" }}
             >
               <img

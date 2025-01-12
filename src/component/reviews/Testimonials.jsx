@@ -134,7 +134,12 @@ const TestimonialsSlider = () => {
       {/* <h2 className="text-2xl font-semibold text-center mb-6">
         The Trust We've Earned
       </h2> */}
-      <header className="text-center mt-6 text-2xl font-bold sm:text-4xl  bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent">
+      <header
+        className="text-center mt-6 text-2xl font-bold sm:text-4xl  bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent"
+        style={{
+          fontFamily: "Gilroy-Medium",
+        }}
+      >
         The Trust We’ve Earned
       </header>
       <div className="text-center  my-6">

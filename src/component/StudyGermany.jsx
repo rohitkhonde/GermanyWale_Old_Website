@@ -22,7 +22,7 @@ import recommendateIcon from "../assets/studygermany/recommendateIcon.svg";
 import universityapplicantIcon from "../assets/studygermany/universityapplicantIcon.svg";
 import visaIcon from "../assets/studygermany/visaIcon.svg";
 import accomodateIcon from "../assets/studygermany/accomodateIcon.svg";
-
+import gm from "../assets/studygermany/germanylogo.jpeg";
 // New images
 
 import s1 from "../assets/Services/s1.png";
@@ -204,7 +204,7 @@ const StudyGermany = () => {
         <div className="text-left">
           <h3
             className="text-2xl sm:text-4xl font-bold mt-4 mb-14 overflow-hidden  bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent text-center "
-            style={{ fontFamily: "Gilroy" }}
+            style={{ fontFamily: "Gilroy-Medium" }}
           >
             Study In Germany With Us
           </h3>
@@ -221,7 +221,7 @@ const StudyGermany = () => {
               />
             </div>
             <div className="w-[100%] sm:w-[45%] py-4 sm:py-0 p-0 sm:p-4 flex order-2 sm:order-2 ">
-              <div className="h-full ">
+              <div className="h-full mt-3 ">
                 <img
                   src={freecousellinIcon}
                   alt="freecousellinIcon"
@@ -269,7 +269,7 @@ const StudyGermany = () => {
           {/* second */}
           <div className="group flex flex-col sm:flex-row justify-between py-0 sm:py-4 ps-12 sm:ps-0 px-4 sm:px-10 mb-1 hover:bg-[#FDF7F7]">
             <div className="w-[100%] sm:w-[45%] py-4 sm:py-4 p-0 sm:p-4 flex order-2 sm:order-1">
-              <div className="h-full ">
+              <div className="h-full mt-3 ">
                 <img
                   src={universityIcon}
                   alt="universityIcon"
@@ -290,7 +290,7 @@ const StudyGermany = () => {
                   }}
                   className="mb-3"
                 >
-                  50% Applications fail due to wrong choice of university
+                  Universities & Courses considering job market fit
                 </p>
                 <p
                   className="text-sm mb-3"
@@ -329,7 +329,7 @@ const StudyGermany = () => {
               />
             </div>
             <div className="w-[100%] sm:w-[45%] py-4 sm:py-4 p-0 sm:p-4 flex ">
-              <div className="h-full ">
+              <div className="h-full mt-3 ">
                 <img
                   src={statementIcon}
                   alt="statementIcon"
@@ -376,11 +376,11 @@ const StudyGermany = () => {
           {/* fourth */}
           <div className="group flex flex-col sm:flex-row justify-between py-0 sm:py-4 ps-12 sm:ps-0 px-4 sm:px-10 mb-1 hover:bg-[#FDF7F7]">
             <div className="w-[100%] sm:w-[45%] py-4 sm:py-4 p-0 sm:p-4 flex order-2 sm:order-1">
-              <div className="h-full ">
+              <div className="h-full mt-3 ">
                 <img
                   src={curriculumIcon}
                   alt="curriculumIcon"
-                  height="70"
+                  height="50"
                   width="70"
                 />
               </div>
@@ -397,7 +397,7 @@ const StudyGermany = () => {
                   }}
                   className="mb-3"
                 >
-                  Full Assistance
+                  Personalised CV for University
                 </p>
                 <p
                   className="text-sm mb-3"
@@ -437,7 +437,7 @@ const StudyGermany = () => {
               />
             </div>
             <div className="w-[100%] sm:w-[45%] py-4 sm:py-4 p-0 sm:p-4 flex ">
-              <div className="h-full ">
+              <div className="h-full mt-3 ">
                 <img
                   src={recommendateIcon}
                   alt="recommendateIcon"
@@ -484,7 +484,7 @@ const StudyGermany = () => {
           {/* sixth */}
           <div className="group flex flex-col sm:flex-row justify-between py-0 sm:py-4 ps-12 sm:ps-0 px-4 sm:px-10 mb-1 hover:bg-[#FDF7F7]">
             <div className="w-[100%] sm:w-[45%] py-4 sm:py-4 p-0 sm:p-4 flex order-2 sm:order-1">
-              <div className="h-full ">
+              <div className="h-full mt-3 ">
                 <img
                   src={universityapplicantIcon}
                   alt="universityapplicantIcon"
@@ -540,7 +540,7 @@ const StudyGermany = () => {
               <img src={visa} alt="visa" className="h-56 w-10/12 object-fill" />
             </div>
             <div className="w-[100%] sm:w-[45%] py-4 sm:py-4 p-0 sm:p-4 flex ">
-              <div className="h-full ">
+              <div className="h-full mt-3">
                 <img src={visaIcon} alt="visaIcon" height="70" width="70" />
               </div>
               <div className="text-left ms-2 mt-2">
@@ -583,7 +583,7 @@ const StudyGermany = () => {
           {/* eight */}
           <div className="group flex flex-col sm:flex-row justify-between py-0 sm:py-4 ps-12 sm:ps-0 px-4 sm:px-10 mb-1 hover:bg-[#FDF7F7]">
             <div className="w-[100%] sm:w-[45%] py-4 sm:py-4 p-0 sm:p-4 flex order-2 sm:order-1">
-              <div className="h-full ">
+              <div className="h-full mt-3 ">
                 <img
                   src={accomodateIcon}
                   alt="accomodateIcon"
@@ -743,12 +743,8 @@ const StudyGermany = () => {
           )}
         </div>
       </div>
-      <div className="mobile-view-flag relative top-[-40px] min-h-[10px] flex items-center justify-center bg-white">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Flag_map_of_Germany.svg/665px-Flag_map_of_Germany.svg.png" // Replace this with your image URL
-          alt="Centered Logo"
-          className="w-36 h-24 object-contain"
-        />
+      <div className="mobile-view-flag relative top-[-10px] min-h-[70px] flex items-center justify-center bg-transparent">
+        <img src={gm} alt="Centered Logo" className="w-24 h-24 object-cover" />
       </div>
     </>
   );

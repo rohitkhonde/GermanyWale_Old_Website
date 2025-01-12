@@ -79,7 +79,7 @@ function News({ handleWatchStory }) {
             <div className="flex justify-center px-1 sm:px-8 lg:px-5">
               <h3
                 className="text-2xl sm:text-4xl w-[92%] font-bold mt-4 mb-5 overflow-hidden   bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent"
-                style={{ fontFamily: "Gilroy" }}
+                style={{ fontFamily: "Gilroy-Medium" }}
               >
                 Latest News From Our Blog
               </h3>

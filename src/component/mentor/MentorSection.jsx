@@ -42,8 +42,8 @@ const MentorSection = () => {
       <div>
         {/* <h2 className="m1-heading">OUR MENTOR</h2> */}
         <h3
-          className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent "
-          style={{ fontFamily: "Gilroy" }}
+          className="text-2xl sm:text-4xl font-bold mt-8 mb-6 bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent "
+          style={{ fontFamily: "Gilroy-Medium" }}
         >
           World Class Mentors
         </h3>

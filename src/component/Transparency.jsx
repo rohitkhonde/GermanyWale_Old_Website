@@ -18,7 +18,7 @@ const Transparency = () => {
         <div className="mb-3">
           <h3
             className="text-center text-2xl sm:text-4xl font-bold mt-4 mb-1 overflow-hidden  bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent"
-            style={{ fontFamily: "Gilroy" }}
+            style={{ fontFamily: "Gilroy-Medium" }}
           >
             We Believe In 100% Transparency
           </h3>
