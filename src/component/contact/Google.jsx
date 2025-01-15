@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { collection, addDoc } from "firebase/firestore";
-import { auth, db } from "./firebase"; // Adjust the path as necessary
+import { auth, db } from "./firebase";
+import { Country, City } from "country-state-city";
+import { useNavigate } from "react-router-dom";
 
 const DEGREE_OPTIONS = [
   { value: "bachelors", label: "Bachelors" },
@@ -11,18 +13,42 @@ const DEGREE_OPTIONS = [
 ];
 
 export default function Google() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",
     email: "",
     degree: "bachelors",
+    country: "",
+    city: "",
   });
 
+  const [countries, setCountries] = useState([]);
+  const [cities, setCities] = useState([]);
+
+  // Fetch all countries on component mount
+  useEffect(() => {
+    const allCountries = Country.getAllCountries();
+    setCountries(allCountries);
+  }, []);
+
+  // Fetch cities whenever a country is selected
+  useEffect(() => {
+    if (formData.country) {
+      const countryCities = City.getCitiesOfCountry(formData.country);
+      setCities(countryCities || []);
+    } else {
+      setCities([]);
+    }
+  }, [formData.country]);
+
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+      ...(name === "country" && { city: "" }), // Reset city if country changes
+    }));
   };
 
   const handlePhoneChange = (value) => {
@@ -32,14 +58,12 @@ export default function Google() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate mobile number
     if (!formData.mobile || formData.mobile.length < 10) {
       alert("Please enter a valid mobile number.");
       return;
     }
 
     try {
-      // Save form data to Firestore
       await addDoc(collection(db, "contactForm"), formData);
       alert("Form submitted successfully!");
       setFormData({
@@ -47,6 +71,8 @@ export default function Google() {
         mobile: "",
         email: "",
         degree: "bachelors",
+        country: "",
+        city: "",
       });
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -61,6 +87,7 @@ export default function Google() {
       const user = result.user;
       console.log("Google Sign-In Success:", user);
       alert(`Welcome, ${user.displayName}!`);
+      navigate("/"); // Redirect to homepage after successful sign-in
     } catch (error) {
       console.error("Google Sign-In Failed:", error);
       alert("Google Sign-In failed. Please try again.");
@@ -78,12 +105,7 @@ export default function Google() {
           />
         </div>
 
-        <div
-          className="w-full md:w-1/2 p-6 md:p-8"
-          style={{
-            fontFamily: "Gilroy",
-          }}
-        >
+        <div className="w-full md:w-1/2 p-6 md:p-8">
           <h2 className="mb-6 text-2xl font-bold">Contact Us</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
@@ -130,6 +152,47 @@ export default function Google() {
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2"
                 required
               />
+            </div>
+
+            <div>
+              <label className="block text-left font-semibold text-lg">
+                Country
+              </label>
+              <select
+                name="country"
+                value={formData.country}
+                onChange={handleChange}
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2"
+                required
+              >
+                <option value="">Select Country</option>
+                {countries.map((country) => (
+                  <option key={country.isoCode} value={country.isoCode}>
+                    {country.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-left font-semibold text-lg">
+                City
+              </label>
+              <select
+                name="city"
+                value={formData.city}
+                onChange={handleChange}
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2"
+                required
+                disabled={!formData.country}
+              >
+                <option value="">Select City</option>
+                {cities.map((city) => (
+                  <option key={city.name} value={city.name}>
+                    {city.name}
+                  </option>
+                ))}
+              </select>
             </div>
 
             <div>

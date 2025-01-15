@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0fbde211.css",
-    "main.js": "/static/js/main.71a0a604.js",
+    "main.css": "/static/css/main.1007d839.css",
+    "main.js": "/static/js/main.e9437a4f.js",
     "static/js/453.fb2e08f7.chunk.js": "/static/js/453.fb2e08f7.chunk.js",
     "static/media/st3.jpg": "/static/media/st3.e0419456fc19b66f335e.jpg",
     "static/media/university3.jpg": "/static/media/university3.030f6d58612daa6e063a.jpg",
@@ -111,6 +111,7 @@
     "static/media/mannheim.svg": "/static/media/mannheim.0c2aa6aee99b3173a56d44a9b890dd07.svg",
     "static/media/u4.png": "/static/media/u4.f1a1d1e6e8f81acb10ff.png",
     "static/media/topWave.png": "/static/media/topWave.980924a3b070f08c5211.png",
+    "static/media/germanylogo.jpeg": "/static/media/germanylogo.9be54df66b42d2321509.jpeg",
     "static/media/shagununiversity.png": "/static/media/shagununiversity.eda06bbbc8dc0f695133.png",
     "static/media/worms.svg": "/static/media/worms.77e8970c332bd96227faa5d217890df2.svg",
     "static/media/lufthansa2.png": "/static/media/lufthansa2.748b1bdc0dd8dacafd81.png",
@@ -148,12 +149,12 @@
     "index.html": "/index.html",
     "static/media/location.svg": "/static/media/location.64d6ce9b1f8b63440f28e05e879939c1.svg",
     "static/media/dividerline.svg": "/static/media/dividerline.87704cf845e692481a3f7cfeed7a3a5e.svg",
-    "main.0fbde211.css.map": "/static/css/main.0fbde211.css.map",
-    "main.71a0a604.js.map": "/static/js/main.71a0a604.js.map",
+    "main.1007d839.css.map": "/static/css/main.1007d839.css.map",
+    "main.e9437a4f.js.map": "/static/js/main.e9437a4f.js.map",
     "453.fb2e08f7.chunk.js.map": "/static/js/453.fb2e08f7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0fbde211.css",
-    "static/js/main.71a0a604.js"
+    "static/css/main.1007d839.css",
+    "static/js/main.e9437a4f.js"
   ]
 }
