@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { collection, addDoc } from "firebase/firestore";
-import { auth, db } from "./firebase";
+import { auth } from "./firebase"; // Ensure Firebase is configured properly
 import { Country, City } from "country-state-city";
 import { useNavigate } from "react-router-dom";
 
@@ -64,16 +63,68 @@ export default function Google() {
     }
 
     try {
-      await addDoc(collection(db, "contactForm"), formData);
-      alert("Form submitted successfully!");
-      setFormData({
-        name: "",
-        mobile: "",
-        email: "",
-        degree: "bachelors",
-        country: "",
-        city: "",
-      });
+      // Format date to IST with AM/PM
+      const currentDate = new Date();
+      const istDate = new Intl.DateTimeFormat("en-IN", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        hour12: true,
+        timeZone: "Asia/Kolkata",
+      }).format(currentDate);
+
+      // Prepare the row data to be submitted
+      const rowData = [
+        formData.name,
+        formData.mobile,
+        formData.email,
+        formData.degree,
+        formData.country,
+        formData.city,
+        istDate, // Current Date and Time in IST
+      ];
+
+      // Define headers and request options
+      const myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+
+      const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: JSON.stringify([rowData]), // Only send the row data
+        redirect: "follow",
+      };
+
+      // Send data to Google Sheets API
+      const response = await fetch(
+        "https://v1.nocodeapi.com/rohitkhonde/google_sheets/cbMkHTwXxstZOMlp?tabId=Sheet1",
+        requestOptions
+      );
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log("Success:", result);
+        alert("Form submitted successfully!");
+
+        // Reset the form
+        setFormData({
+          name: "",
+          mobile: "",
+          email: "",
+          degree: "bachelors",
+          country: "",
+          city: "",
+        });
+
+        navigate("/"); // Redirect to the home page
+      } else {
+        const errorText = await response.text();
+        console.error("Error:", errorText);
+        alert("Failed to submit the form. Please try again.");
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("An error occurred. Please try again.");
@@ -85,8 +136,9 @@ export default function Google() {
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
+
       console.log("Google Sign-In Success:", user);
-      alert(`Welcome, ${user.displayName}!`);
+      alert(`Welcome, ${user.displayName}! You are now signed in.`);
       navigate("/"); // Redirect to homepage after successful sign-in
     } catch (error) {
       console.error("Google Sign-In Failed:", error);
@@ -132,11 +184,6 @@ export default function Google() {
                 onChange={handlePhoneChange}
                 inputClass="block w-full h-10 px-4 pl-12 text-base text-gray-700 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                 containerClass="w-full"
-                buttonStyle={{
-                  background: "transparent",
-                  border: "none",
-                  padding: "0",
-                }}
               />
             </div>
 
@@ -206,11 +253,7 @@ export default function Google() {
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2"
               >
                 {DEGREE_OPTIONS.map((option) => (
-                  <option
-                    className="text-left font-semibold"
-                    key={option.value}
-                    value={option.value}
-                  >
+                  <option key={option.value} value={option.value}>
                     {option.label}
                   </option>
                 ))}
