@@ -30,6 +30,7 @@ import Accomodation from "./component/ServicesPages/Accomodation/Accomodation";
 import Visa from "./component/ServicesPages/VisaAssistance/Visa";
 import TestimonialsSlider from "./component/reviews/Testimonials";
 import AboutUs from "./component/AboutUs/AboutUs";
+import ThankYouPage from "./component/contact/ThankYouPage";
 
 function App() {
   const ScrollToTop = () => {
@@ -74,6 +75,7 @@ function App() {
           <Route path="/visa" element={<Visa />} />
           <Route path="/reviews" element={<TestimonialsSlider />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/thank-you" element={<ThankYouPage />} />
         </Routes>
         {/* Footer visible on all pages */}
         <Footer />

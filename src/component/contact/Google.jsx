@@ -107,7 +107,6 @@ export default function Google() {
       if (response.ok) {
         const result = await response.json();
         console.log("Success:", result);
-        alert("Form submitted successfully!");
 
         // Reset the form
         setFormData({
@@ -119,7 +118,8 @@ export default function Google() {
           city: "",
         });
 
-        navigate("/"); // Redirect to the home page
+        // Redirect to Thank You Page in a new tab
+        window.open("/thank-you", "_blank");
       } else {
         const errorText = await response.text();
         console.error("Error:", errorText);
@@ -136,10 +136,10 @@ export default function Google() {
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
-
       console.log("Google Sign-In Success:", user);
-      alert(`Welcome, ${user.displayName}! You are now signed in.`);
-      navigate("/"); // Redirect to homepage after successful sign-in
+
+      // Redirect to Thank You Page in a new tab
+      window.open("/thank-you", "_blank");
     } catch (error) {
       console.error("Google Sign-In Failed:", error);
       alert("Google Sign-In failed. Please try again.");

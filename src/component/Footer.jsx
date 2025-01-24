@@ -4,6 +4,7 @@ import { RiYoutubeLine } from "react-icons/ri";
 import logo from "../assets/image/footerlogo.png";
 import germany from "../assets/image/germanylogo.png";
 import "../styles/Footer.css";
+import { Link, Navigate } from "react-router-dom";
 
 const Footer = () => {
   // Scroll to top function
@@ -148,13 +149,14 @@ const Footer = () => {
           {/* Footer Bottom Section */}
           <div className="px-4 sm:px-4 lg:px-5 ">
             <div className="mb-2">
-              {/* Logo: Clickable and scrolls to top */}
-              <img
-                src={logo}
-                alt="logo"
-                className="h-14 w-auto cursor-pointer"
-                onClick={scrollToTop}
-              />
+              {/* Logo: Clickable, scrolls to top, and redirects to home */}
+              <Link to="/" onClick={scrollToTop}>
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="h-14 w-auto cursor-pointer"
+                />
+              </Link>
             </div>
             <div className="flex flex-wrap justify-between sm:px-10">
               <div className="text-[#969696]">
