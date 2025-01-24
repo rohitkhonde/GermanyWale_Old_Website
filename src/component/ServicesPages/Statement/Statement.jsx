@@ -13,6 +13,11 @@ import {
 // import "./University.css";
 import ui from "../../../assets/ServicePageImages/Statement/st.jpg";
 import ac from "../../../assets/ServicePageImages/Statement/st3.jpg";
+import Cv from "../CV/Cv";
+import Letter from "../LetterOfRecommendation/Letter";
+import UniversityApplication from "../UniversityApplication/UniversityApplication";
+import Visa from "../VisaAssistance/Visa";
+import Accomodation from "../Accomodation/Accomodation";
 // import Universities from "../../../Universities";
 
 const services = [
@@ -167,6 +172,11 @@ const Statement = () => {
           ))}
         </div>
       </div> */}
+      {/* <Cv />
+      <Letter />
+      <UniversityApplication />
+      <Visa />
+      <Accomodation /> */}
     </div>
   );
 };

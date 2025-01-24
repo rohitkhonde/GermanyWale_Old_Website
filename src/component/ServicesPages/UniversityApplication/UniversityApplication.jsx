@@ -13,6 +13,8 @@ import {
 // import "./University.css";
 import ui from "../../../assets/ServicePageImages/UniversityApp/ua.jpg";
 import ac from "../../../assets/ServicePageImages/UniversityApp/universityApp.jpeg";
+import Visa from "../VisaAssistance/Visa";
+import Accomodation from "../Accomodation/Accomodation";
 // import Universities from "../../../Universities";
 const universities = [
   {
@@ -231,6 +233,8 @@ const UniversityApplication = () => {
           ))}
         </div>
       </div>
+      {/* <Visa />
+      <Accomodation /> */}
     </div>
   );
 };

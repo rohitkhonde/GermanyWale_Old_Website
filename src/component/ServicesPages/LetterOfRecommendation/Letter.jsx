@@ -13,6 +13,9 @@ import {
 // import "./University.css";
 import ui from "../../../assets/ServicePageImages/Letter/Lt.jpg";
 import ac from "../../../assets/ServicePageImages/Letter/LOR.jpeg";
+import UniversityApplication from "../UniversityApplication/UniversityApplication";
+import Visa from "../VisaAssistance/Visa";
+import Accomodation from "../Accomodation/Accomodation";
 // import Universities from "../../../Universities";
 const universities = [
   {
@@ -228,6 +231,9 @@ const Letter = () => {
           ))}
         </div>
       </div>
+      {/* <UniversityApplication />
+      <Visa />
+      <Accomodation /> */}
     </div>
   );
 };

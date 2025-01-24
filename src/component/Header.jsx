@@ -69,24 +69,32 @@ const Header = () => {
         <a
           href="https://www.instagram.com/germanywale_official/"
           className="text-2xl"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <FaInstagram />
         </a>
         <a
           href="https://www.facebook.com/germanywale.official"
           className="text-2xl"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <FaFacebookF />
         </a>
         <a
           href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHew-hMvUKd_AAAAY9ZN_rAu07_INrQoBX1IS_axiVStOj7Rt82XwhOLyqcUD-9UsbIQXYfQgN91Rgj-Ppc_5wVr7PGLQX-Hu2xZytqGVC390b8PuSeULKEPU01oudMFB57120=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2F35885346%2Fadmin%2Ffeed%2Fposts%2F"
           className="text-2xl"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <FaLinkedin />
         </a>
         <a
           href="https://www.youtube.com/@germanywale_official"
           className="text-2xl"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <RiYoutubeLine />
         </a>
