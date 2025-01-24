@@ -15,12 +15,6 @@ import ui from "../../../assets/ServicePageImages/UniversityApp/ua.jpg";
 import ac from "../../../assets/ServicePageImages/UniversityApp/universityApp.jpeg";
 import Visa from "../VisaAssistance/Visa";
 import Accomodation from "../Accomodation/Accomodation";
-import Visadup from "../VisaAssistance/Visadup";
-import Accomodationdup from "../Accomodation/Accomodationdup";
-import Universitydup from "../University/Universitydup";
-import Statementdup from "../Statement/Statementdup";
-import Cvdup from "../CV/Cvdup";
-import Letterdup from "../LetterOfRecommendation/Letterdup";
 // import Universities from "../../../Universities";
 const universities = [
   {
@@ -116,7 +110,7 @@ const services = [
     path: "/accomodation",
   },
 ];
-const UniversityApplication = () => {
+const UniversityApplicationdup = () => {
   const [selected, setSelected] = useState(""); // Store selected card
   const navigate = useNavigate(); // React Router navigation
 
@@ -241,14 +235,8 @@ const UniversityApplication = () => {
       </div>
       {/* <Visa />
       <Accomodation /> */}
-      <Visadup />
-      <Accomodationdup />
-      <Universitydup />
-      <Statementdup />
-      <Cvdup />
-      <Letterdup />
     </div>
   );
 };
 
-export default UniversityApplication;
+export default UniversityApplicationdup;

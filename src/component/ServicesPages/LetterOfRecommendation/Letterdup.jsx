@@ -11,16 +11,11 @@ import {
   FaHome,
 } from "react-icons/fa";
 // import "./University.css";
-import ui from "../../../assets/ServicePageImages/UniversityApp/ua.jpg";
-import ac from "../../../assets/ServicePageImages/UniversityApp/universityApp.jpeg";
+import ui from "../../../assets/ServicePageImages/Letter/Lt.jpg";
+import ac from "../../../assets/ServicePageImages/Letter/LOR.jpeg";
+import UniversityApplication from "../UniversityApplication/UniversityApplication";
 import Visa from "../VisaAssistance/Visa";
 import Accomodation from "../Accomodation/Accomodation";
-import Visadup from "../VisaAssistance/Visadup";
-import Accomodationdup from "../Accomodation/Accomodationdup";
-import Universitydup from "../University/Universitydup";
-import Statementdup from "../Statement/Statementdup";
-import Cvdup from "../CV/Cvdup";
-import Letterdup from "../LetterOfRecommendation/Letterdup";
 // import Universities from "../../../Universities";
 const universities = [
   {
@@ -33,48 +28,50 @@ const universities = [
         className="text-[#EA7D06]"
       >
         <path
+          fill="currentColor"
+          d="M6 11a2 2 0 0 1 2 2v4H4a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2zm-2 2v2h2v-2zm16 0v2h2v2h-2a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h2v2zm-8-6v4h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V7zm0 8h2v-2h-2z"
+        ></path>
+      </svg>
+    ),
+    title: "Our Writers Are Experts",
+  },
+  {
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={24}
+        height={24}
+        viewBox="0 0 2048 2048"
+        className="text-[#EA7D06]"
+      >
+        <path
+          fill="currentColor"
+          d="M547 788q-29 51-71 79t-103 29q-40 0-73-11t-58-34t-37-54t-13-74q0-45 13-78t38-57t59-38t77-21l170-25q0-30-5-57t-19-48t-36-33t-57-13q-53 0-99 19t-86 54v-98q16-12 40-22t52-17t54-12t47-5q54 0 92 15t62 45t35 70t11 92v387h-91v-93zm-153 27q37 0 65-14t49-39t30-56t11-66v-60l-137 21q-28 5-51 11t-40 18t-26 33t-10 53q0 48 32 73t77 26m465-19v85h-91V0h91v391h2q33-59 87-89t121-30q63 0 107 25t72 67t41 94t13 108q0 61-14 120t-46 105t-80 76t-119 29q-57 0-105-25t-77-75zm0-241v83q0 39 12 71t36 56t55 37t71 13q51 0 85-23t54-60t28-80t9-87q0-39-8-77t-28-68t-51-48t-76-19q-45 0-80 15t-59 43t-36 64t-12 80m840-202q-50 0-87 20t-62 53t-37 76t-12 88t11 86t35 72t60 49t87 18q38 0 73-14t66-38v91q-35 23-74 32t-81 10q-65 0-115-23t-84-64t-53-95t-18-116q0-69 19-128t56-104t92-69t128-25q34 0 67 7t64 23v97q-30-22-64-34t-71-12M895 1829l724-722l90 90l-814 814l-428-430l90-90z"
+        ></path>
+      </svg>
+    ),
+    title: "Grammar, Spelling, Punctuation",
+  },
+  {
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={24}
+        height={24}
+        viewBox="0 0 24 24"
+        className="text-[#EA7D06]"
+      >
+        <path
           fill="none"
           stroke="currentColor"
-          strokeWidth={2}
-          d="M8 11A5 5 0 1 0 8 1a5 5 0 0 0 0 10Zm6.643 4.696a6.75 6.75 0 0 0-1.62-2.673C11.772 11.76 10.013 11 8 11c-4 0-7 3-7 7v5h10m1-4.176L16.19 22L23 13"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M2.652 14.714V9.78m3.18 2.07l4.049 2.667a4 4 0 0 0 4.402 0l4.049-2.668m-12.5 0L3.099 10.05a.99.99 0 0 1-.45-.815m3.183 2.616v5.061c0 .495.119.987.44 1.364c.747.877 2.514 2.39 5.81 2.39s5.063-1.513 5.81-2.39c.32-.377.44-.869.44-1.364V11.85m0 0l2.48-1.634a1.2 1.2 0 0 0 0-2.004l-6.53-4.302a4 4 0 0 0-4.401 0L3.099 8.379a.99.99 0 0 0-.45.855m0 0v.547"
         ></path>
       </svg>
     ),
-    title: "We Are Experts",
-  },
-  {
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={24}
-        height={24}
-        viewBox="0 0 24 24"
-        className="text-[#EA7D06]"
-      >
-        <path
-          fill="currentColor"
-          d="M8.5 6H6.7C8.2 4.7 10 4 12 4c.3 0 .6 0 .9.1c.5.1 1-.3 1.1-.9c.1-.5-.3-1-.9-1.1c-.4-.1-.7-.1-1.1-.1c-2.4 0-4.7.9-6.5 2.4V3c0-.6-.4-1-1-1s-1 .4-1 1v4c0 .6.4 1 1 1h4c.6 0 1-.4 1-1s-.4-1-1-1M7 14.5c-.6 0-1 .4-1 1v1.8C4.7 15.8 4 14 4 12c0-.3 0-.6.1-.9c.1-.5-.3-1-.9-1.1c-.5-.1-1 .3-1.1.9c-.1.4-.1.7-.1 1.1c0 2.4.9 4.7 2.4 6.5H3c-.6 0-1 .4-1 1s.4 1 1 1h4c.3 0 .6-.2.8-.4c0-.1.1-.2.1-.3v-4.3c.1-.6-.3-1-.9-1m14-9c.6 0 1-.4 1-1s-.4-1-1-1h-4.2c-.1 0-.2.1-.3.1c-.1.1-.2.1-.2.2s-.1.2-.1.2v4.3c0 .6.4 1 1 1s1-.4 1-1V6.7c1.3 1.4 2 3.3 2 5.3c0 .3 0 .6-.1.9c-.1.5.3 1 .9 1.1h.1c.5 0 .9-.4 1-.9c0-.4.1-.7.1-1.1c0-2.4-.9-4.7-2.4-6.5zm-.7 11l-.3-.3c-.1-.1-.2-.1-.3-.1h-4.2c-.6 0-1 .4-1 1s.4 1 1 1h1.8c-1.4 1.3-3.3 2-5.3 2c-.3 0-.6 0-.9-.1c-.5-.1-1 .3-1.1.9s.3 1 .9 1.1c.4 0 .7.1 1.1.1c2.4 0 4.7-.9 6.5-2.4V21c0 .6.4 1 1 1s1-.4 1-1v-4c0-.2-.1-.4-.2-.5"
-        ></path>
-      </svg>
-    ),
-    title: "Process Oriented",
-  },
-  {
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={24}
-        height={24}
-        viewBox="0 0 24 24"
-        className="text-[#EA7D06]"
-      >
-        <path
-          fill="currentColor"
-          d="M16 13c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1m-4-7c3.859 0 7 3.141 7 7s-3.141 7-7 7s-7-3.141-7-7s3.141-7 7-7m0-2c-4.971 0-9 4.029-9 9s4.029 9 9 9s9-4.029 9-9s-4.029-9-9-9m1 6c0-.55-.45-1-1-1s-1 .45-1 1v3c0 .55.45 1 1 1s1-.45 1-1zm-1-2c2.757 0 5 2.243 5 5s-2.243 5-5 5s-5-2.243-5-5s2.243-5 5-5m0-1a6 6 0 0 0 0 12a6 6 0 0 0 0-12"
-        ></path>
-      </svg>
-    ),
-    title: "We Value Time",
+    title: "Academic And Work LORs",
   },
 ];
 
@@ -116,7 +113,7 @@ const services = [
     path: "/accomodation",
   },
 ];
-const UniversityApplication = () => {
+const Letterdup = () => {
   const [selected, setSelected] = useState(""); // Store selected card
   const navigate = useNavigate(); // React Router navigation
 
@@ -137,7 +134,7 @@ const UniversityApplication = () => {
         {/* Content */}
         <div className="relative z-4 flex h-full items-center justify-center text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-            University Application{" "}
+            Letter of Recommendation
           </h1>
         </div>
       </div>
@@ -178,28 +175,23 @@ const UniversityApplication = () => {
             </div>
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                University Application{" "}
+                Letter Of Recommendation (LOR)
               </h2>
               <p className="university-description mb-6">
-                Germanywale will assist students for the entire university
-                application process till the time you reach Germany.Most German
-                universities accept applications twice a year; for the summer
-                semester and the winter semester. Applications can be sent
-                through two channels; either directly to the university or
-                through Uni-assist. Our local German team guides you through
-                this entire process for a smooth and hassle free application
-                step.
+                Increase your chances of admission by taking our assistance in
+                vouching for your skills and aptitude for formulating a ‘good’
+                to ‘great’ Letter of Recommendation
               </p>
               <ul className="space-y-4">
                 <li className="flex items-center li-text">
                   <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
-                  Online application submission
+                  Check plagiarism{" "}
                 </li>
                 <li className="flex items-center li-text">
                   <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
-                  Uni-assist application fee payment facility{" "}
+                  Check spelling and grammatical errors
                 </li>
-                {/* <li className="flex items-center li-text">
+                <li className="flex items-center li-text">
                   <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
                   Give suggestion/feedback points
                 </li>
@@ -210,7 +202,7 @@ const UniversityApplication = () => {
                 <li className="flex items-center li-text">
                   <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
                   Delivery File Format: PDF and .docx
-                </li> */}
+                </li>
               </ul>
             </div>
           </div>
@@ -239,16 +231,11 @@ const UniversityApplication = () => {
           ))}
         </div>
       </div>
-      {/* <Visa />
+      {/* <UniversityApplication />
+      <Visa />
       <Accomodation /> */}
-      <Visadup />
-      <Accomodationdup />
-      <Universitydup />
-      <Statementdup />
-      <Cvdup />
-      <Letterdup />
     </div>
   );
 };
 
-export default UniversityApplication;
+export default Letterdup;

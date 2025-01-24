@@ -69,7 +69,7 @@ const services = [
   },
 ];
 
-const University = () => {
+const Universitydup = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -151,26 +151,8 @@ const University = () => {
       <div ref={sectionRefs.university} className="py-16">
         <Universitycomp />
       </div>
-      <div ref={sectionRefs.statement} className="py-16">
-        <Statementdup />
-      </div>
-      <div ref={sectionRefs.cv} className="py-16">
-        <Cvdup />
-      </div>
-      <div ref={sectionRefs.letter} className="py-16">
-        <Letterdup />
-      </div>
-      <div ref={sectionRefs.universityapplication} className="py-16">
-        <UniversityApplicationdup />
-      </div>
-      <div ref={sectionRefs.visa} className="py-16">
-        <Visadup />
-      </div>
-      <div ref={sectionRefs.accomodation} className="py-16">
-        <Accomodationdup />
-      </div>
     </div>
   );
 };
 
-export default University;
+export default Universitydup;

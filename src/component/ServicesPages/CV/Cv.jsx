@@ -17,6 +17,12 @@ import Letter from "../LetterOfRecommendation/Letter";
 import UniversityApplication from "../UniversityApplication/UniversityApplication";
 import Visa from "../VisaAssistance/Visa";
 import Accomodation from "../Accomodation/Accomodation";
+import Letterdup from "../LetterOfRecommendation/Letterdup";
+import UniversityApplicationdup from "../UniversityApplication/UniversityApplicationdup";
+import Visadup from "../VisaAssistance/Visadup";
+import Accomodationdup from "../Accomodation/Accomodationdup";
+import Universitydup from "../University/Universitydup";
+import Statementdup from "../Statement/Statementdup";
 // import Universities from "../../../Universities";
 const universities = [
   {
@@ -239,6 +245,13 @@ const Cv = () => {
       <UniversityApplication />
       <Visa />
       <Accomodation /> */}
+
+      <Letterdup />
+      <UniversityApplicationdup />
+      <Visadup />
+      <Accomodationdup />
+      <Universitydup />
+      <Statementdup />
     </div>
   );
 };

@@ -16,6 +16,12 @@ import ac from "../../../assets/ServicePageImages/Letter/LOR.jpeg";
 import UniversityApplication from "../UniversityApplication/UniversityApplication";
 import Visa from "../VisaAssistance/Visa";
 import Accomodation from "../Accomodation/Accomodation";
+import UniversityApplicationdup from "../UniversityApplication/UniversityApplicationdup";
+import Visadup from "../VisaAssistance/Visadup";
+import Accomodationdup from "../Accomodation/Accomodationdup";
+import Universitydup from "../University/Universitydup";
+import Statementdup from "../Statement/Statementdup";
+import Cvdup from "../CV/Cvdup";
 // import Universities from "../../../Universities";
 const universities = [
   {
@@ -234,6 +240,12 @@ const Letter = () => {
       {/* <UniversityApplication />
       <Visa />
       <Accomodation /> */}
+      <UniversityApplicationdup />
+      <Visadup />
+      <Accomodationdup />
+      <Universitydup />
+      <Statementdup />
+      <Cvdup />
     </div>
   );
 };

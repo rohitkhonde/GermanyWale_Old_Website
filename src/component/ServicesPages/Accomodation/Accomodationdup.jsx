@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // Import React Router navigation
+
 import {
   FaUserGraduate,
   FaUniversity,
@@ -11,16 +12,8 @@ import {
   FaHome,
 } from "react-icons/fa";
 // import "./University.css";
-import ui from "../../../assets/ServicePageImages/UniversityApp/ua.jpg";
-import ac from "../../../assets/ServicePageImages/UniversityApp/universityApp.jpeg";
-import Visa from "../VisaAssistance/Visa";
-import Accomodation from "../Accomodation/Accomodation";
-import Visadup from "../VisaAssistance/Visadup";
-import Accomodationdup from "../Accomodation/Accomodationdup";
-import Universitydup from "../University/Universitydup";
-import Statementdup from "../Statement/Statementdup";
-import Cvdup from "../CV/Cvdup";
-import Letterdup from "../LetterOfRecommendation/Letterdup";
+import ui from "../../../assets/ServicePageImages/Acco/Acco.png";
+import ac from "../../../assets/ServicePageImages/Acco/accomodation.jpeg";
 // import Universities from "../../../Universities";
 const universities = [
   {
@@ -32,15 +25,17 @@ const universities = [
         viewBox="0 0 24 24"
         className="text-[#EA7D06]"
       >
-        <path
-          fill="none"
-          stroke="currentColor"
-          strokeWidth={2}
-          d="M8 11A5 5 0 1 0 8 1a5 5 0 0 0 0 10Zm6.643 4.696a6.75 6.75 0 0 0-1.62-2.673C11.772 11.76 10.013 11 8 11c-4 0-7 3-7 7v5h10m1-4.176L16.19 22L23 13"
-        ></path>
+        <g fill="none" stroke="currentColor" strokeWidth={1.5}>
+          <path d="m18.18 8.04l.463-.464a1.966 1.966 0 1 1 2.781 2.78l-.463.464M18.18 8.04s.058.984.927 1.853s1.854.927 1.854.927M18.18 8.04l-4.26 4.26c-.29.288-.434.433-.558.592q-.22.282-.374.606c-.087.182-.151.375-.28.762l-.413 1.24l-.134.401m8.8-5.081l-4.26 4.26c-.29.29-.434.434-.593.558q-.282.22-.606.374c-.182.087-.375.151-.762.28l-1.24.413l-.401.134m0 0l-.401.134a.53.53 0 0 1-.67-.67l.133-.402m.938.938l-.938-.938"></path>
+          <path strokeLinecap="round" d="M8 13h2.5M8 9h6.5M8 17h1.5"></path>
+          <path
+            d="M3 10c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h2c3.771 0 5.657 0 6.828 1.172S21 6.229 21 10v4c0 3.771 0 5.657-1.172 6.828S16.771 22 13 22h-2c-3.771 0-5.657 0-6.828-1.172S3 17.771 3 14z"
+            opacity={0.5}
+          ></path>
+        </g>
       </svg>
     ),
-    title: "We Are Experts",
+    title: "Our Writers Are Experts",
   },
   {
     icon: (
@@ -51,13 +46,17 @@ const universities = [
         viewBox="0 0 24 24"
         className="text-[#EA7D06]"
       >
-        <path
-          fill="currentColor"
-          d="M8.5 6H6.7C8.2 4.7 10 4 12 4c.3 0 .6 0 .9.1c.5.1 1-.3 1.1-.9c.1-.5-.3-1-.9-1.1c-.4-.1-.7-.1-1.1-.1c-2.4 0-4.7.9-6.5 2.4V3c0-.6-.4-1-1-1s-1 .4-1 1v4c0 .6.4 1 1 1h4c.6 0 1-.4 1-1s-.4-1-1-1M7 14.5c-.6 0-1 .4-1 1v1.8C4.7 15.8 4 14 4 12c0-.3 0-.6.1-.9c.1-.5-.3-1-.9-1.1c-.5-.1-1 .3-1.1.9c-.1.4-.1.7-.1 1.1c0 2.4.9 4.7 2.4 6.5H3c-.6 0-1 .4-1 1s.4 1 1 1h4c.3 0 .6-.2.8-.4c0-.1.1-.2.1-.3v-4.3c.1-.6-.3-1-.9-1m14-9c.6 0 1-.4 1-1s-.4-1-1-1h-4.2c-.1 0-.2.1-.3.1c-.1.1-.2.1-.2.2s-.1.2-.1.2v4.3c0 .6.4 1 1 1s1-.4 1-1V6.7c1.3 1.4 2 3.3 2 5.3c0 .3 0 .6-.1.9c-.1.5.3 1 .9 1.1h.1c.5 0 .9-.4 1-.9c0-.4.1-.7.1-1.1c0-2.4-.9-4.7-2.4-6.5zm-.7 11l-.3-.3c-.1-.1-.2-.1-.3-.1h-4.2c-.6 0-1 .4-1 1s.4 1 1 1h1.8c-1.4 1.3-3.3 2-5.3 2c-.3 0-.6 0-.9-.1c-.5-.1-1 .3-1.1.9s.3 1 .9 1.1c.4 0 .7.1 1.1.1c2.4 0 4.7-.9 6.5-2.4V21c0 .6.4 1 1 1s1-.4 1-1v-4c0-.2-.1-.4-.2-.5"
-        ></path>
+        <g fill="none" stroke="currentColor" strokeWidth={1.5}>
+          <path d="m18.18 8.04l.463-.464a1.966 1.966 0 1 1 2.781 2.78l-.463.464M18.18 8.04s.058.984.927 1.853s1.854.927 1.854.927M18.18 8.04l-4.26 4.26c-.29.288-.434.433-.558.592q-.22.282-.374.606c-.087.182-.151.375-.28.762l-.413 1.24l-.134.401m8.8-5.081l-4.26 4.26c-.29.29-.434.434-.593.558q-.282.22-.606.374c-.182.087-.375.151-.762.28l-1.24.413l-.401.134m0 0l-.401.134a.53.53 0 0 1-.67-.67l.133-.402m.938.938l-.938-.938"></path>
+          <path strokeLinecap="round" d="M8 13h2.5M8 9h6.5M8 17h1.5"></path>
+          <path
+            d="M3 10c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h2c3.771 0 5.657 0 6.828 1.172S21 6.229 21 10v4c0 3.771 0 5.657-1.172 6.828S16.771 22 13 22h-2c-3.771 0-5.657 0-6.828-1.172S3 17.771 3 14z"
+            opacity={0.5}
+          ></path>
+        </g>
       </svg>
     ),
-    title: "Process Oriented",
+    title: "Grammar, Spelling, Punctuation",
   },
   {
     icon: (
@@ -68,13 +67,14 @@ const universities = [
         viewBox="0 0 24 24"
         className="text-[#EA7D06]"
       >
+        <path fill="currentColor" d="M2 7v1l11 4l9-4V7L11 4z"></path>
         <path
           fill="currentColor"
-          d="M16 13c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1m-4-7c3.859 0 7 3.141 7 7s-3.141 7-7 7s-7-3.141-7-7s3.141-7 7-7m0-2c-4.971 0-9 4.029-9 9s4.029 9 9 9s9-4.029 9-9s-4.029-9-9-9m1 6c0-.55-.45-1-1-1s-1 .45-1 1v3c0 .55.45 1 1 1s1-.45 1-1zm-1-2c2.757 0 5 2.243 5 5s-2.243 5-5 5s-5-2.243-5-5s2.243-5 5-5m0-1a6 6 0 0 0 0 12a6 6 0 0 0 0-12"
+          d="M4 11v4.267c0 1.621 4.001 3.893 9 3.734c4-.126 6.586-1.972 7-3.467q.037-.133.037-.268V11L13 14l-5-1.667v3.213l-1-.364V12z"
         ></path>
       </svg>
     ),
-    title: "We Value Time",
+    title: "Academic And Work LORs",
   },
 ];
 
@@ -116,7 +116,8 @@ const services = [
     path: "/accomodation",
   },
 ];
-const UniversityApplication = () => {
+
+const Accomodationdup = () => {
   const [selected, setSelected] = useState(""); // Store selected card
   const navigate = useNavigate(); // React Router navigation
 
@@ -137,7 +138,7 @@ const UniversityApplication = () => {
         {/* Content */}
         <div className="relative z-4 flex h-full items-center justify-center text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-            University Application{" "}
+            Accommodation & Travel Assistance{" "}
           </h1>
         </div>
       </div>
@@ -178,26 +179,26 @@ const UniversityApplication = () => {
             </div>
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                University Application{" "}
+                Accommodation & Travel Assistance{" "}
               </h2>
               <p className="university-description mb-6">
-                Germanywale will assist students for the entire university
-                application process till the time you reach Germany.Most German
-                universities accept applications twice a year; for the summer
-                semester and the winter semester. Applications can be sent
-                through two channels; either directly to the university or
-                through Uni-assist. Our local German team guides you through
-                this entire process for a smooth and hassle free application
-                step.
+                We have a partnership with many travel agents who offer the best
+                discounts on flight tickets and ensure that students traveling
+                from India have a special baggage allowance to carry sufficient
+                things from India.Our local German team takes care of the
+                accommodation requirements for our students. GERMANYWALE has
+                contacts with many student hostels, housing companies, and
+                private apartment owners to help you out with your
+                accommodation.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-center li-text">
                   <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
-                  Online application submission
+                  Travel Tickets{" "}
                 </li>
                 <li className="flex items-center li-text">
                   <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
-                  Uni-assist application fee payment facility{" "}
+                  Accommodation Assistance{" "}
                 </li>
                 {/* <li className="flex items-center li-text">
                   <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
@@ -239,16 +240,8 @@ const UniversityApplication = () => {
           ))}
         </div>
       </div>
-      {/* <Visa />
-      <Accomodation /> */}
-      <Visadup />
-      <Accomodationdup />
-      <Universitydup />
-      <Statementdup />
-      <Cvdup />
-      <Letterdup />
     </div>
   );
 };
 
-export default UniversityApplication;
+export default Accomodationdup;

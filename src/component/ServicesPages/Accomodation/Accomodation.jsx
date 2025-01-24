@@ -14,6 +14,12 @@ import {
 // import "./University.css";
 import ui from "../../../assets/ServicePageImages/Acco/Acco.png";
 import ac from "../../../assets/ServicePageImages/Acco/accomodation.jpeg";
+import Visadup from "../VisaAssistance/Visadup";
+import Universitydup from "../University/Universitydup";
+import Statementdup from "../Statement/Statementdup";
+import Cvdup from "../CV/Cvdup";
+import Letterdup from "../LetterOfRecommendation/Letterdup";
+import UniversityApplicationdup from "../UniversityApplication/UniversityApplicationdup";
 // import Universities from "../../../Universities";
 const universities = [
   {
@@ -240,6 +246,12 @@ const Accomodation = () => {
           ))}
         </div>
       </div>
+      <Universitydup />
+      <Statementdup />
+      <Cvdup />
+      <Letterdup />
+      <UniversityApplicationdup />
+      <Visadup />
     </div>
   );
 };

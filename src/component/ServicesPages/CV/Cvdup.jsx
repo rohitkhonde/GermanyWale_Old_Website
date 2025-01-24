@@ -11,16 +11,12 @@ import {
   FaHome,
 } from "react-icons/fa";
 // import "./University.css";
-import ui from "../../../assets/ServicePageImages/UniversityApp/ua.jpg";
-import ac from "../../../assets/ServicePageImages/UniversityApp/universityApp.jpeg";
+import ui from "../../../assets/ServicePageImages/CV/cv.jpg";
+import ac from "../../../assets/ServicePageImages/CV/cvimage.jpeg";
+import Letter from "../LetterOfRecommendation/Letter";
+import UniversityApplication from "../UniversityApplication/UniversityApplication";
 import Visa from "../VisaAssistance/Visa";
 import Accomodation from "../Accomodation/Accomodation";
-import Visadup from "../VisaAssistance/Visadup";
-import Accomodationdup from "../Accomodation/Accomodationdup";
-import Universitydup from "../University/Universitydup";
-import Statementdup from "../Statement/Statementdup";
-import Cvdup from "../CV/Cvdup";
-import Letterdup from "../LetterOfRecommendation/Letterdup";
 // import Universities from "../../../Universities";
 const universities = [
   {
@@ -33,14 +29,35 @@ const universities = [
         className="text-[#EA7D06]"
       >
         <path
-          fill="none"
-          stroke="currentColor"
-          strokeWidth={2}
-          d="M8 11A5 5 0 1 0 8 1a5 5 0 0 0 0 10Zm6.643 4.696a6.75 6.75 0 0 0-1.62-2.673C11.772 11.76 10.013 11 8 11c-4 0-7 3-7 7v5h10m1-4.176L16.19 22L23 13"
+          fill="currentColor"
+          d="M15.75 13a.75.75 0 0 0-.75-.75H9a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 .75-.75m0 4a.75.75 0 0 0-.75-.75H9a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 .75-.75"
+        ></path>
+        <path
+          fill="currentColor"
+          fillRule="evenodd"
+          d="M7 2.25A2.75 2.75 0 0 0 4.25 5v14A2.75 2.75 0 0 0 7 21.75h10A2.75 2.75 0 0 0 19.75 19V7.968c0-.381-.124-.751-.354-1.055l-2.998-3.968a1.75 1.75 0 0 0-1.396-.695zM5.75 5c0-.69.56-1.25 1.25-1.25h7.25v4.397c0 .414.336.75.75.75h3.25V19c0 .69-.56 1.25-1.25 1.25H7c-.69 0-1.25-.56-1.25-1.25z"
+          clipRule="evenodd"
         ></path>
       </svg>
     ),
-    title: "We Are Experts",
+    title: "European Format",
+  },
+  {
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={20}
+        height={20}
+        viewBox="0 0 20 20"
+        className="text-[#EA7D06]"
+      >
+        <path
+          fill="currentColor"
+          d="M5 7a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1zm9 0H6v2h8zm-2 4a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1zm0 1h2v1h-2zm-7-.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 1.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zM3 6a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3zm3-2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"
+        ></path>
+      </svg>
+    ),
+    title: "Content Relevency",
   },
   {
     icon: (
@@ -53,28 +70,11 @@ const universities = [
       >
         <path
           fill="currentColor"
-          d="M8.5 6H6.7C8.2 4.7 10 4 12 4c.3 0 .6 0 .9.1c.5.1 1-.3 1.1-.9c.1-.5-.3-1-.9-1.1c-.4-.1-.7-.1-1.1-.1c-2.4 0-4.7.9-6.5 2.4V3c0-.6-.4-1-1-1s-1 .4-1 1v4c0 .6.4 1 1 1h4c.6 0 1-.4 1-1s-.4-1-1-1M7 14.5c-.6 0-1 .4-1 1v1.8C4.7 15.8 4 14 4 12c0-.3 0-.6.1-.9c.1-.5-.3-1-.9-1.1c-.5-.1-1 .3-1.1.9c-.1.4-.1.7-.1 1.1c0 2.4.9 4.7 2.4 6.5H3c-.6 0-1 .4-1 1s.4 1 1 1h4c.3 0 .6-.2.8-.4c0-.1.1-.2.1-.3v-4.3c.1-.6-.3-1-.9-1m14-9c.6 0 1-.4 1-1s-.4-1-1-1h-4.2c-.1 0-.2.1-.3.1c-.1.1-.2.1-.2.2s-.1.2-.1.2v4.3c0 .6.4 1 1 1s1-.4 1-1V6.7c1.3 1.4 2 3.3 2 5.3c0 .3 0 .6-.1.9c-.1.5.3 1 .9 1.1h.1c.5 0 .9-.4 1-.9c0-.4.1-.7.1-1.1c0-2.4-.9-4.7-2.4-6.5zm-.7 11l-.3-.3c-.1-.1-.2-.1-.3-.1h-4.2c-.6 0-1 .4-1 1s.4 1 1 1h1.8c-1.4 1.3-3.3 2-5.3 2c-.3 0-.6 0-.9-.1c-.5-.1-1 .3-1.1.9s.3 1 .9 1.1c.4 0 .7.1 1.1.1c2.4 0 4.7-.9 6.5-2.4V21c0 .6.4 1 1 1s1-.4 1-1v-4c0-.2-.1-.4-.2-.5"
+          d="M19 6.5h-3v-1a3 3 0 0 0-3-3h-2a3 3 0 0 0-3 3v1H5a3 3 0 0 0-3 3v9a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-9a3 3 0 0 0-3-3m-9-1a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1h-4Zm10 13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V13a21.7 21.7 0 0 0 8 1.53A21.8 21.8 0 0 0 20 13Zm0-7.69a19.9 19.9 0 0 1-16 0V9.5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1Z"
         ></path>
       </svg>
     ),
-    title: "Process Oriented",
-  },
-  {
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={24}
-        height={24}
-        viewBox="0 0 24 24"
-        className="text-[#EA7D06]"
-      >
-        <path
-          fill="currentColor"
-          d="M16 13c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1m-4-7c3.859 0 7 3.141 7 7s-3.141 7-7 7s-7-3.141-7-7s3.141-7 7-7m0-2c-4.971 0-9 4.029-9 9s4.029 9 9 9s9-4.029 9-9s-4.029-9-9-9m1 6c0-.55-.45-1-1-1s-1 .45-1 1v3c0 .55.45 1 1 1s1-.45 1-1zm-1-2c2.757 0 5 2.243 5 5s-2.243 5-5 5s-5-2.243-5-5s2.243-5 5-5m0-1a6 6 0 0 0 0 12a6 6 0 0 0 0-12"
-        ></path>
-      </svg>
-    ),
-    title: "We Value Time",
+    title: "Universities + Job",
   },
 ];
 
@@ -116,7 +116,7 @@ const services = [
     path: "/accomodation",
   },
 ];
-const UniversityApplication = () => {
+const Cvdup = () => {
   const [selected, setSelected] = useState(""); // Store selected card
   const navigate = useNavigate(); // React Router navigation
 
@@ -137,7 +137,7 @@ const UniversityApplication = () => {
         {/* Content */}
         <div className="relative z-4 flex h-full items-center justify-center text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-            University Application{" "}
+            Curriculum Vitae{" "}
           </h1>
         </div>
       </div>
@@ -178,26 +178,22 @@ const UniversityApplication = () => {
             </div>
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                University Application{" "}
+                Curriculum Vitae{" "}
               </h2>
               <p className="university-description mb-6">
-                Germanywale will assist students for the entire university
-                application process till the time you reach Germany.Most German
-                universities accept applications twice a year; for the summer
-                semester and the winter semester. Applications can be sent
-                through two channels; either directly to the university or
-                through Uni-assist. Our local German team guides you through
-                this entire process for a smooth and hassle free application
-                step.
+                Full assistance from us in tailoring a curriculum vitae
+                explicitly describing your skills and experiences to cater your
+                application objective
               </p>
               <ul className="space-y-4">
                 <li className="flex items-center li-text">
                   <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
-                  Online application submission
+                  CV is prepared in a format which is well accepted by all the
+                  German Universities{" "}
                 </li>
                 <li className="flex items-center li-text">
                   <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
-                  Uni-assist application fee payment facility{" "}
+                  CV is relevant and matched to your target field.{" "}
                 </li>
                 {/* <li className="flex items-center li-text">
                   <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
@@ -239,16 +235,12 @@ const UniversityApplication = () => {
           ))}
         </div>
       </div>
-      {/* <Visa />
+      {/* <Letter />
+      <UniversityApplication />
+      <Visa />
       <Accomodation /> */}
-      <Visadup />
-      <Accomodationdup />
-      <Universitydup />
-      <Statementdup />
-      <Cvdup />
-      <Letterdup />
     </div>
   );
 };
 
-export default UniversityApplication;
+export default Cvdup;

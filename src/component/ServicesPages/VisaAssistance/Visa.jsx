@@ -13,6 +13,12 @@ import {
 // import "./University.css";
 import ui from "../../../assets/ServicePageImages/Visa/Visa.png";
 import ac from "../../../assets/ServicePageImages/Visa/visaimage.jpeg";
+import Accomodationdup from "../Accomodation/Accomodationdup";
+import Universitydup from "../University/Universitydup";
+import Statementdup from "../Statement/Statementdup";
+import Cvdup from "../CV/Cvdup";
+import Letterdup from "../LetterOfRecommendation/Letterdup";
+import UniversityApplicationdup from "../UniversityApplication/UniversityApplicationdup";
 // import vi from "../../../../assets/ServicePageImages/Visa/visaicon.png";
 // import Universities from "../../../Universities";
 const universities = [
@@ -210,6 +216,12 @@ const Visa = () => {
           ))}
         </div>
       </div>
+      <Accomodationdup />
+      <Universitydup />
+      <Statementdup />
+      <Cvdup />
+      <Letterdup />
+      <UniversityApplicationdup />
     </div>
   );
 };
