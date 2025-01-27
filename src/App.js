@@ -31,6 +31,8 @@ import Visa from "./component/ServicesPages/VisaAssistance/Visa";
 import TestimonialsSlider from "./component/reviews/Testimonials";
 import AboutUs from "./component/AboutUs/AboutUs";
 import ThankYouPage from "./component/contact/ThankYouPage";
+import PricingSection from "./component/PaymentPages/PricingSection";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   const ScrollToTop = () => {
@@ -49,6 +51,7 @@ function App() {
         <ScrollToTop /> {/* Scroll to top logic */}
         <Header />
         <Navbar />
+        <SpeedInsights />
         {/* Routing */}
         <Routes>
           <Route path="/" element={<LandingPage />} />
@@ -76,6 +79,7 @@ function App() {
           <Route path="/reviews" element={<TestimonialsSlider />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/thank-you" element={<ThankYouPage />} />
+          <Route path="/pricingsection" element={<PricingSection />} />
         </Routes>
         {/* Footer visible on all pages */}
         <Footer />
