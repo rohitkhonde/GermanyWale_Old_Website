@@ -2,158 +2,290 @@ import { useState } from "react";
 import { CheckIcon, XIcon } from "lucide-react";
 
 export default function PricingSection() {
-  const [isYearly, setIsYearly] = useState(false);
-
+  const formatFeatureName = (text) =>
+    text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
   const plans = [
     {
-      name: "Free Lite",
-      description: "Lorem Ipsum simply dummy text of the printing.",
-      monthlyPrice: 29.99,
-      yearlyPrice: 215.92, // 40% off monthly * 12
+      name: "Lite",
+      price: "\u20B942,999",
       features: [
-        { name: "Core UI Components", included: true },
-        { name: "Use on Unlimited Projects", included: false },
-        { name: "Personal and Commercial Use", included: true },
-        { name: "Lifetime Free Updates", included: true },
-        { name: "Figma Source File", included: false },
-      ],
-      primaryButton: true,
-      buttonText: "Start 14 Days Free Trial",
-    },
-    {
-      name: "Business Plan",
-      description: "Lorem Ipsum simply dummy text of the printing.",
-      monthlyPrice: 59.0,
-      yearlyPrice: 424.8, // 40% off monthly * 12
-      features: [
-        { name: "Core UI Components", included: true },
-        { name: "Use on Unlimited Projects", included: true },
-        { name: "Personal and Commercial Use", included: true },
-        { name: "Lifetime Free Updates", included: true },
-        { name: "Figma Source File", included: true },
-        { name: "Additional Support", included: true },
-        { name: "More Features", included: false },
+        {
+          heading: "Course Selection",
+          items: [
+            { name: "Profile Evaluation", included: true },
+            {
+              name: "Eligibility check & course module analysis",
+              included: true,
+            },
+            {
+              name: "Academic Evaluation Center application with Support",
+              included: false,
+            },
+            {
+              name: "University Shortlisting list (2 universities)",
+              included: true,
+            },
+            { name: "Mentorship session (1:1) with SME", included: false },
+          ],
+        },
+        {
+          heading: "Application Documents Support",
+          items: [
+            { name: "Curriculum Vitae and Profile Building", included: true },
+            {
+              name: "Letter of Motivation (Review)",
+              included: true,
+            },
+            { name: "Letter of Recommendation", included: false },
+            { name: "Experience Letter", included: false },
+          ],
+        },
+        {
+          heading: "University Acceptance Process",
+          items: [
+            { name: "Target Universities (3 universities)", included: true },
+            {
+              name: "Uni-assist&University portal Administration",
+              included: true,
+            },
+            { name: "Full Support Application Process", included: true },
+            {
+              name: "Application follow-up with the admission committee",
+              included: false,
+            },
+            {
+              name: "University personalized feedback on the applied courses",
+              included: false,
+            },
+          ],
+        },
+        {
+          heading: "Post Admission Process",
+          items: [
+            {
+              name: "Reconsideration process with the University officials",
+              included: false,
+            },
+            { name: "Admission Acceptance procedure", included: false },
+            {
+              name: "University enrollment process, Fee payment and support",
+              included: false,
+            },
+          ],
+        },
       ],
       buttonText: "Get The Plan Now",
     },
     {
-      name: "Extended Plan",
-      description: "Lorem Ipsum simply dummy text of the printing.",
-      monthlyPrice: 229.99,
-      yearlyPrice: 1655.92, // 40% off monthly * 12
+      name: "Value",
+      price: "\u20B952,999",
       features: [
-        { name: "Core UI Components", included: true },
-        { name: "Use on Unlimited Projects", included: true },
-        { name: "Personal and Commercial Use", included: true },
-        { name: "Lifetime Free Updates", included: true },
-        { name: "Figma Source File", included: true },
-        { name: "24/7 Priority Support", included: true },
-        { name: "Access to Beta Features", included: true },
-        { name: "Dedicated Account Manager", included: true },
-        { name: "Advanced Analytics", included: true },
+        {
+          heading: "Course Selection",
+          items: [
+            { name: "Profile Evaluation", included: true },
+            {
+              name: "Eligibility Check & Course Module Analysis",
+              included: true,
+            },
+            {
+              name: "Academic Evaluation Center application with Support",
+              included: true,
+            },
+            {
+              name: "University Shortlisting list (4 universities)",
+              included: true,
+            },
+            {
+              name: "Mentorship session (1:1) with SME (1 session)",
+              included: true,
+            },
+          ],
+        },
+        {
+          heading: "Application Documents Support",
+          items: [
+            { name: "Curriculum Vitae and Profile Building", included: true },
+            {
+              name: "Statement of Purpose/ Letter of Motivation",
+              included: true,
+            },
+            { name: "Letter of Recommendation", included: true },
+            { name: "Experience Letter", included: false },
+          ],
+        },
+        {
+          heading: "University Acceptance Process",
+          items: [
+            { name: "Target Universities (6 universities)", included: true },
+            {
+              name: "Uni-assist & University portal Administration",
+              included: true,
+            },
+            { name: "Full Support Application Process", included: true },
+            {
+              name: "Application follow-up with the admission committee",
+              included: true,
+            },
+            {
+              name: "University personalized feedback on the applied courses",
+              included: true,
+            },
+          ],
+        },
+        {
+          heading: "Post Admission Process",
+          items: [
+            {
+              name: "Reconsideration process with the University officials",
+              included: false,
+            },
+            { name: "Admission Acceptance procedure", included: true },
+            {
+              name: "University enrollment process, Fee payment and support",
+              included: false,
+            },
+          ],
+        },
+      ],
+      buttonText: "Get The Plan Now",
+    },
+    {
+      name: "Ultimate",
+      price: "\u20B959,999",
+      features: [
+        {
+          heading: "Course Selection",
+          items: [
+            { name: "Profile Evaluation", included: true },
+            {
+              name: "Eligibility Check & Course Module Analysis",
+              included: true,
+            },
+            {
+              name: "Academic Evaluation Center application with Support",
+              included: true,
+            },
+            {
+              name: "University Shortlisting list (Full support)",
+              included: true,
+            },
+            {
+              name: "Mentorship session (1:1) with SME (2 sessions)",
+              included: true,
+            },
+          ],
+        },
+        {
+          heading: "Application Documents Support",
+          items: [
+            { name: "Curriculum Vitae and Profile Building", included: true },
+            {
+              name: "Statement of Purpose/ Letter of Motivation",
+              included: true,
+            },
+            { name: "Letter of Recommendation", included: true },
+            { name: "Experience Letter", included: true },
+          ],
+        },
+        {
+          heading: "University Acceptance Process",
+          items: [
+            { name: "Target Universities (10 universities)", included: true },
+            {
+              name: "Uni-assist & University portal Administration",
+              included: true,
+            },
+            { name: "Full Support Application Process", included: true },
+            {
+              name: "Application follow-up with the admission committee",
+              included: true,
+            },
+            {
+              name: "University personalized feedback on the applied courses",
+              included: true,
+            },
+          ],
+        },
+        {
+          heading: "Post Admission Process",
+          items: [
+            {
+              name: "Reconsideration process with the University officials",
+              included: true,
+            },
+            { name: "Admission Acceptance procedure", included: true },
+            {
+              name: "University enrollment process, Fee payment and support",
+              included: true,
+            },
+          ],
+        },
       ],
       buttonText: "Get The Plan Now",
     },
   ];
-
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
-          <h2 className="text-base font-semibold text-blue-600">
+          <h2 className="text-base font-semibold bg-gradient-to-r from-[#E56D09] via-[#D83E13] to-[#D83E13] bg-clip-text text-transparent">
             Our Pricing Plans
           </h2>
           <h1 className="mt-3 text-4xl font-bold text-gray-900 sm:text-5xl">
             Pricing and Plans
           </h1>
           <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
-            There are many variations of passages of Lorem Ipsum available but
-            the majority have suffered alteration in some form.
+            Choose the plan that best fits your needs and goals.
           </p>
         </div>
 
-        <div className="mt-12 flex justify-center items-center gap-4">
-          <span
-            className={`text-lg ${
-              !isYearly ? "text-blue-600 font-semibold" : "text-gray-500"
-            }`}
-          >
-            Monthly
-          </span>
-          <button
-            onClick={() => setIsYearly(!isYearly)}
-            className="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 bg-gray-200"
-            role="switch"
-            aria-checked={isYearly}
-          >
-            <span
-              className={`${
-                isYearly ? "translate-x-5" : "translate-x-0"
-              } pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out`}
-            />
-          </button>
-          <span
-            className={`text-lg ${
-              isYearly ? "text-blue-600 font-semibold" : "text-gray-500"
-            }`}
-          >
-            Yearly
-          </span>
-          {isYearly && (
-            <span className="ml-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-500">
-              Save 40%
-            </span>
-          )}
-        </div>
-
         <div className="mt-16 grid gap-8 lg:grid-cols-3 lg:gap-6">
-          {plans.map((plan, index) => (
+          {plans.map((plan) => (
             <div
               key={plan.name}
               className="relative flex flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all hover:shadow-lg"
             >
               <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
-              <p className="mt-4 text-gray-500">{plan.description}</p>
-              <div className="my-8 flex items-baseline">
+              <div className="my-8 flex justify-center items-baseline">
                 <span className="text-4xl font-bold tracking-tight text-gray-900">
-                  $
+                  {plan.price}
                 </span>
-                <span className="text-5xl font-bold tracking-tight text-gray-900">
-                  {isYearly
-                    ? plan.yearlyPrice.toFixed(2)
-                    : plan.monthlyPrice.toFixed(2)}
-                </span>
-                <span className="ml-1 text-lg text-gray-500">/month</span>
               </div>
-              <div className="space-y-4">
-                <p className="text-gray-700 font-medium">Plan Includes:</p>
-                <div className="max-h-32 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 space-y-3">
-                  {plan.features.map((feature, index) => (
-                    <div key={index} className="flex items-center ">
-                      {feature.included ? (
-                        <CheckIcon className="h-5 w-5 text-green-500 mr-3" />
-                      ) : (
-                        <XIcon className="h-5 w-5 text-red-500 mr-3" />
-                      )}
-                      <span
-                        className={`text-gray-600 ${
-                          !feature.included ? "line-through" : ""
-                        }`}
-                      >
-                        {feature.name}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+              <div className="space-y-6 max-h-60 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+                {plan.features.map((feature, index) => (
+                  <div key={index} className="space-y-4">
+                    <p className="text-gray-700 font-semibold">
+                      {feature.heading}
+                    </p>
+                    <ul className="space-y-2">
+                      {feature.items.map((item, idx) => (
+                        <li key={idx} className="flex items-start">
+                          <div className="flex-shrink-0 mr-2">
+                            {item.included ? (
+                              <CheckIcon className="h-5 w-5 text-green-500" />
+                            ) : (
+                              <XIcon className="h-5 w-5 text-red-500" />
+                            )}
+                          </div>
+                          <div className="text-left">
+                            <span
+                              className={
+                                item.included
+                                  ? "text-gray-600"
+                                  : "text-gray-400 line-through"
+                              }
+                            >
+                              {formatFeatureName(item.name)}
+                            </span>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
-              <button
-                className={`mt-8 w-full rounded-lg px-4 py-3 text-lg font-semibold transition-colors
-                  ${
-                    plan.primaryButton
-                      ? "bg-blue-600 text-white hover:bg-blue-700"
-                      : "border-2 border-blue-600 text-blue-600 hover:bg-blue-50"
-                  }`}
-              >
+              <button className="mt-8 w-full rounded-lg px-4 py-3 text-lg font-semibold transition-colors  text-white  bg-gradient-to-r from-[#E56D09] via-[#D83E13] to-[#D83E13] ">
                 {plan.buttonText}
               </button>
             </div>
