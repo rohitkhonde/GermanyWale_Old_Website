@@ -96,10 +96,10 @@ const Footer = () => {
                   <a href="/contact">Contact</a>
                 </li>
                 <li>
-                  <a href="/contact">Privacy Policies</a>
+                  <a href="/privacyandrefund">Privacy Policies</a>
                 </li>
                 <li>
-                  <a href="/contact">Refund Policies</a>
+                  <a href="/privacyandrefund">Refund Policies</a>
                 </li>
               </ul>
             </div>
