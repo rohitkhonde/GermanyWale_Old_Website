@@ -242,13 +242,13 @@ const StudyGermany = () => {
                   }}
                   className="mb-3"
                 >
-                  Our personalized session at NO COST{" "}
+                  Our personalized session at no cost{" "}
                 </p>
                 <p
                   className="text-sm mb-3"
                   style={{ fontFamily: "Gilroy-Regular" }}
                 >
-                  Get Free Expert Guidance on your Study Abroad dream and
+                  Get free expert guidance on your study abroad dream and
                   shortlist courses from a plethora of 500+ Universities and
                   15,000+ courses.
                 </p>
@@ -296,7 +296,7 @@ const StudyGermany = () => {
                   className="text-sm mb-3"
                   style={{ fontFamily: "Gilroy-Regular" }}
                 >
-                  Apply to multiple institutions in a single application with
+                  Apply to multiple University in a single application with
                   numerous fee waivers and save your time.
                 </p>
 
@@ -357,7 +357,7 @@ const StudyGermany = () => {
                   style={{ fontFamily: "Gilroy-Regular" }}
                 >
                   Stand out from the crowd with a great professionally assisted
-                  Statement of Purpose, and let us help you in putting your
+                  statement of Purpose, and let us help you in putting your
                   story into words.
                 </p>
 
@@ -403,7 +403,7 @@ const StudyGermany = () => {
                   className="text-sm mb-3"
                   style={{ fontFamily: "Gilroy-Regular" }}
                 >
-                  Full assistance from us in tailoring a curriculum vitae
+                  Complete assistance from us in tailoring a curriculum vitae
                   explicitly describing your skills and experiences to cater
                   your application objective.
                 </p>
@@ -562,9 +562,9 @@ const StudyGermany = () => {
                   className="text-sm mb-3"
                   style={{ fontFamily: "Gilroy-Regular" }}
                 >
-                  With our Visa Expert, fulfil the Visa application requirements
-                  and apply for the Visa. We have a success rate of more than
-                  95.5%
+                  With our Visa Expert, fulfill the Visa application
+                  requirements and apply for the Visa. We have a success rate of
+                  more than 95.5%.
                 </p>
 
                 <button
@@ -611,8 +611,8 @@ const StudyGermany = () => {
                   style={{ fontFamily: "Gilroy-Regular" }}
                 >
                   Struggling to find accommodation before moving to a new
-                  country?Not anymore. Book your secure accommodation online and
-                  stay stress-free.
+                  country? Not anymore. Book your secure accommodation online
+                  and stay stress-free.
                 </p>
 
                 <button

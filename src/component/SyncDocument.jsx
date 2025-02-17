@@ -39,7 +39,7 @@ const SyncDocument = () => {
                   className="text-sm sm:text-lg text-left"
                   style={{ fontFamily: "Gilroy-Medium" }}
                 >
-                  Discover Universities and courses{" "}
+                  Discover universities and courses.
                 </div>
               </div>
 
@@ -51,7 +51,7 @@ const SyncDocument = () => {
                   className="text-sm sm:text-lg text-left"
                   style={{ fontFamily: "Gilroy-Medium" }}
                 >
-                  Ask doubts and interact with the community
+                  Ask questions and interact with the community.
                 </div>
               </div>
               <div className="flex mb-1">
@@ -62,7 +62,7 @@ const SyncDocument = () => {
                   className="text-sm sm:text-lg text-left"
                   style={{ fontFamily: "Gilroy-Medium" }}
                 >
-                  Latest study abroad news and updates
+                  Latest study abroad news and updates.
                 </div>
               </div>
               <div className="flex mb-1">
@@ -73,7 +73,7 @@ const SyncDocument = () => {
                   className="text-sm sm:text-lg text-left"
                   style={{ fontFamily: "Gilroy-Medium" }}
                 >
-                  Track applications and offers
+                  Track applications and offers.
                 </div>
               </div>
               <div className="flex mb-1">
@@ -84,7 +84,7 @@ const SyncDocument = () => {
                   className="text-sm sm:text-lg text-left"
                   style={{ fontFamily: "Gilroy-Medium" }}
                 >
-                  And a lot more
+                  And a lot more.
                 </div>
               </div>
               {/* <div className="flex justify-center sm:justify-start mt-8">

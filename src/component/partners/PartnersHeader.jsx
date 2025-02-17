@@ -26,8 +26,8 @@ const PartnersHeader = () => (
         maxWidth: "900px",
       }}
     >
-      We have collaborate with a diverse array of partners, each bringing unique
-      expertise and value to make journey of our student hassle free
+      We have collaborated with a diverse array of partners, each bringing
+      unique expertise and value to make journey of our student hassle-free.
     </p>
   </div>
 );

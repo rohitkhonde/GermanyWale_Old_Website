@@ -23,7 +23,7 @@ const Usp = () => {
             Why Choose Us
           </h3> */}
           <p
-            className="text-2xl sm:text-[38px]  font-semibold  bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent"
+            className="text-2xl pb-2 sm:text-[38px]  font-semibold  bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent"
             style={{ fontFamily: "Gilroy-Medium" }}
           >
             Endless Possibilities Begin Here
@@ -46,7 +46,7 @@ const Usp = () => {
               </div>
             </div>
             <div className="grid three rounded-2xl">
-              <div className="hover:rounded-[2.1rem] rounded-[1.3rem] sm:rounded-[2rem] flex flex-col justify-end items-start text-md sm:text-2xl font-semibold text-white bg-[#302b2b61] hover:bg-transparent ">
+              <div className="hover:rounded-[2.1rem] rounded-[1.3rem] sm:rounded-[2rem] flex flex-col justify-end items-center text-md sm:text-2xl font-semibold text-white bg-[#302b2b61] hover:bg-transparent ">
                 <h3 className="ms-10 sm:ms-3">100+</h3>
                 <h3 className="ms-3 mb-7">Elite University Admissions</h3>
               </div>

@@ -28,7 +28,7 @@ const Transparency = () => {
           >
             {" "}
             Simple, flexible, and powerful. Track all your applications with the
-            convince of your phone
+            convenience of your phone
           </p>
         </div>
         <div
