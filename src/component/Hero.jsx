@@ -69,7 +69,7 @@ const Hero = () => {
                   style={{ fontFamily: "Gilroy-Medium" }}
                 >
                   <p className="text-sm sm:text-md">
-                    Our students finished University to work at{" "}
+                    Our students finished university to work at{" "}
                     <span className="text-[#e27c00]">global offices</span> of
                   </p>
                 </div>
