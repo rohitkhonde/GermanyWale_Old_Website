@@ -9,7 +9,7 @@ const TAndC = () => {
       <div className="hero-section-parptc">
         <h1
           className="hero-text  text-2xl sm:text-4xl"
-          style={{ fontFamily: "Gilroy", color: "black" }}
+          style={{ fontFamily: "Gilroy", color: "white" }}
         >
           Terms and Conditions
         </h1>
