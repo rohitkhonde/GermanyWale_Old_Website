@@ -8,8 +8,8 @@ const TAndC = () => {
       {/* Hero Section */}
       <div className="hero-section-parptc">
         <h1
-          className="hero-text text-2xl sm:text-4xl"
-          style={{ fontFamily: "Gilroy" }}
+          className="hero-text  text-2xl sm:text-4xl"
+          style={{ fontFamily: "Gilroy", color: "black" }}
         >
           Terms and Conditions
         </h1>
