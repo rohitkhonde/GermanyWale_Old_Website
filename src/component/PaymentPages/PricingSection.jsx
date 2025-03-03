@@ -4,6 +4,26 @@ import { CheckIcon, XIcon } from "lucide-react";
 export default function PricingSection() {
   const formatFeatureName = (text) =>
     text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+
+  // const handlePayment = async (amount) => {
+  //   try {
+  //     // Call the backend endpoint to initiate payment
+  //     const response = await fetch("http://localhost:8000/initiate-payment", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({ amount: parseInt(amount.replace(/\D/g, "")) }), // Remove non-numeric characters
+  //     });
+
+  //     const data = await response.json();
+  //     if (data.url) {
+  //       window.location.href = data.url; // Redirect to PhonePe payment page
+  //     }
+  //   } catch (error) {
+  //     console.error("Error initiating payment:", error);
+  //   }
+  // };
   const plans = [
     {
       name: "Lite",
@@ -248,7 +268,10 @@ export default function PricingSection() {
             >
               <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
               <div className="my-8 flex justify-center items-baseline">
-                <span className="text-4xl font-bold tracking-tight text-gray-900">
+                <span
+                  className="text-4xl font-bold tracking-tight text-gray-900 cursor-pointer"
+                  // onClick={() => handlePayment(plan.price)}
+                >
                   {plan.price}
                 </span>
               </div>
@@ -285,7 +308,10 @@ export default function PricingSection() {
                   </div>
                 ))}
               </div>
-              <button className="mt-8 w-full rounded-lg px-4 py-3 text-lg font-semibold transition-colors  text-white  bg-gradient-to-r from-[#E56D09] via-[#D83E13] to-[#D83E13] ">
+              <button
+                className="mt-8 w-full rounded-lg px-4 py-3 text-lg font-semibold transition-colors  text-white  bg-gradient-to-r from-[#E56D09] via-[#D83E13] to-[#D83E13] "
+                // onClick={() => handlePayment(plan.price)} // Pass the price to handlePayment
+              >
                 {plan.buttonText}
               </button>
             </div>

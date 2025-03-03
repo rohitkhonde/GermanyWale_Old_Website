@@ -34,6 +34,7 @@ import ThankYouPage from "./component/contact/ThankYouPage";
 import PricingSection from "./component/PaymentPages/PricingSection";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import PARP2 from "./component/PrivacyAndRefundPolicy/PARP2";
+import TAndC from "./component/TermsandCondition/TAndC";
 
 function App() {
   const ScrollToTop = () => {
@@ -82,6 +83,7 @@ function App() {
           <Route path="/thank-you" element={<ThankYouPage />} />
           <Route path="/pricingsection" element={<PricingSection />} />
           <Route path="/privacyandrefund" element={<PARP2 />} />
+          <Route path="/terms" element={<TAndC />} />
         </Routes>
         {/* Footer visible on all pages */}
         <Footer />

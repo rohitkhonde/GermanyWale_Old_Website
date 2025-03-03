@@ -3,8 +3,9 @@ import { FaInstagram, FaFacebookF, FaLinkedin } from "react-icons/fa";
 import { RiYoutubeLine } from "react-icons/ri";
 import logo from "../assets/image/footerlogo.png";
 import germany from "../assets/image/germanylogo.png";
+import india from "../assets/image/indialogo3.png";
 import "../styles/Footer.css";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   // Scroll to top function
@@ -93,7 +94,7 @@ const Footer = () => {
                   <a href="/about">About</a>
                 </li>
                 <li>
-                  <a href="/contact">Contact</a>
+                  <a href="/terms">Terms and Condition</a>
                 </li>
                 <li>
                   <a href="/privacyandrefund">Privacy Policies</a>
@@ -162,11 +163,22 @@ const Footer = () => {
               <div className="text-[#969696]">
                 Copyrights reserved Germanywale, All rights reserved
               </div>
-              <div className="text-[#A2A1A1] flex">
-                <img src={germany} alt="flag" className="h-4 me-0 sm:me-2" />
-                <span className="text-xs sm:text-md ms-1">
-                  Neckarstrasse 44, 64625-Bensheim, Hessen, Germany
-                </span>
+              <div className="text-[#A2A1A1] flex flex-col">
+                {/* Germany Address */}
+                <div className="flex items-center mb-2">
+                  <img src={germany} alt="flag" className="h-4 me-2" />
+                  <span className="text-xs sm:text-md">
+                    Neckarstrasse 44, 64625-Bensheim, Hessen, Germany
+                  </span>
+                </div>
+
+                {/* India Address */}
+                <div className="flex items-center">
+                  <img src={india} alt="flag" className="h-5 me-2" />
+                  <span className="text-xs sm:text-md">
+                    Dalal Compound, Near MSEB office, Katol road, Nagpur
+                  </span>
+                </div>
               </div>
             </div>
           </div>

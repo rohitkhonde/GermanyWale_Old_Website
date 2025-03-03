@@ -1,0 +1,15 @@
+.parp-container {
+    width: 100%;
+}
+
+.hero-section-parptc {
+    background-image: url("TAndC.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}

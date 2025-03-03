@@ -41,7 +41,7 @@ const Usp = () => {
               <div className="grid h-28 sm:h-56 lg:h-60 second rounded-2xl">
                 <div className="hover:rounded-[2.1rem] rounded-[1.3rem] sm:rounded-[2rem] flex flex-col justify-center items-center text-md sm:text-2xl font-semibold text-white bg-[#302b2b61] hover:bg-transparent ">
                   <h3>200+</h3>
-                  <h3>Acceptances in 2023</h3>
+                  <h3>Acceptances in 2024</h3>
                 </div>
               </div>
             </div>
