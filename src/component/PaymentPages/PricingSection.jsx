@@ -1,33 +1,79 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CheckIcon, XIcon } from "lucide-react";
 
 export default function PricingSection() {
   const formatFeatureName = (text) =>
     text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
 
-  // const handlePayment = async (amount) => {
-  //   try {
-  //     // Call the backend endpoint to initiate payment
-  //     const response = await fetch("http://localhost:8000/initiate-payment", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({ amount: parseInt(amount.replace(/\D/g, "")) }), // Remove non-numeric characters
-  //     });
+  const [paymentStatus, setPaymentStatus] = useState(null);
+  const [razorpayLoaded, setRazorpayLoaded] = useState(false);
 
-  //     const data = await response.json();
-  //     if (data.url) {
-  //       window.location.href = data.url; // Redirect to PhonePe payment page
+  // Dynamically load the Razorpay script
+  // useEffect(() => {
+  //   const script = document.createElement("script");
+  //   script.src = "https://checkout.razorpay.com/v1/checkout.js";
+  //   script.async = true;
+  //   script.onload = () => {
+  //     setRazorpayLoaded(true);
+  //   };
+  //   document.body.appendChild(script);
+
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
+
+  // const handlePayment = async (price, planName, orderId) => {
+  //   try {
+  //     if (!razorpayLoaded) {
+  //       alert("Razorpay is still loading. Please try again in a moment.");
+  //       return;
   //     }
+
+  //     // Convert price to a number (remove non-numeric characters)
+  //     const amount = parseInt(price.replace(/\D/g, ""), 10);
+
+  //     const options = {
+  //       key: "rzp_test_OaZFgQnMYQ9Gmd", // Replace with your Razorpay Key ID
+  //       amount: amount * 100, // Amount in paise
+  //       currency: "INR",
+  //       name: "GermanyWale",
+  //       description: `Payment for ${planName} Plan`,
+  //       order_id: orderId, // Use the specific order ID for the plan
+  //       handler: function (response) {
+  //         setPaymentStatus("success");
+  //         alert("Payment successful! Redirecting to homepage...");
+  //         window.location.href = "/"; // Redirect to homepage
+  //       },
+  //       prefill: {
+  //         name: "Rohit Khonde",
+  //         email: "rohitkhonde15999@gmail.com",
+  //         contact: "7276440061",
+  //       },
+  //       theme: {
+  //         color: "#3399cc",
+  //       },
+  //     };
+
+  //     const rzp = new window.Razorpay(options);
+  //     rzp.open();
+
+  //     rzp.on("payment.failed", function (response) {
+  //       setPaymentStatus("failed");
+  //       alert(`Payment failed: ${response.error.description}`);
+  //     });
   //   } catch (error) {
-  //     console.error("Error initiating payment:", error);
+  //     console.error("Error creating Razorpay order:", error);
+  //     setPaymentStatus("failed");
+  //     alert("Payment failed. Please try again.");
   //   }
   // };
+
   const plans = [
     {
       name: "Lite",
       price: "\u20B942,999",
+      orderId: "order_Q6c9XQn4BHvUYm", // Order ID for Lite plan
       features: [
         {
           heading: "Course Selection",
@@ -99,6 +145,7 @@ export default function PricingSection() {
     {
       name: "Value",
       price: "\u20B952,999",
+      orderId: "order_Q6cAg939I0BcHl", // Order ID for Value plan
       features: [
         {
           heading: "Course Selection",
@@ -173,6 +220,7 @@ export default function PricingSection() {
     {
       name: "Ultimate",
       price: "\u20B959,999",
+      orderId: "order_Q6cBUlMI3kwjIU", // Order ID for Ultimate plan
       features: [
         {
           heading: "Course Selection",
@@ -245,6 +293,7 @@ export default function PricingSection() {
       buttonText: "Get The Plan Now",
     },
   ];
+
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -268,10 +317,7 @@ export default function PricingSection() {
             >
               <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
               <div className="my-8 flex justify-center items-baseline">
-                <span
-                  className="text-4xl font-bold tracking-tight text-gray-900 cursor-pointer"
-                  // onClick={() => handlePayment(plan.price)}
-                >
+                <span className="text-4xl font-bold tracking-tight text-gray-900">
                   {plan.price}
                 </span>
               </div>
@@ -310,7 +356,13 @@ export default function PricingSection() {
               </div>
               <button
                 className="mt-8 w-full rounded-lg px-4 py-3 text-lg font-semibold transition-colors  text-white  bg-gradient-to-r from-[#E56D09] via-[#D83E13] to-[#D83E13] "
-                // onClick={() => handlePayment(plan.price)} // Pass the price to handlePayment
+                // onClick={() =>
+                //   handlePayment(
+                //     plan.price.replace(/\D/g, ""),
+                //     plan.name,
+                //     plan.orderId
+                //   )
+                // }
               >
                 {plan.buttonText}
               </button>

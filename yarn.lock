@@ -3774,7 +3774,7 @@ axe-core@=4.7.0:
   resolved "https://registry.npmjs.org/axe-core/-/axe-core-4.7.0.tgz"
   integrity sha512-M0JtH+hlOL5pLQwHOLNYZaXuhqmvS8oExsqB1SBYgA4Dk7u/xx+YdGHXaK5pyUfed5mYXdlYiphWq3G8cRi5JQ==
 
-axios@^1.8.1:
+axios@^1.6.8, axios@^1.8.1:
   version "1.8.1"
   resolved "https://registry.npmjs.org/axios/-/axios-1.8.1.tgz"
   integrity sha512-NN+fvwH/kV01dYUQ3PTOZns4LWtWhOFCAhQ/pHb88WQ1hNe5V/dvFwc4VJcDL11LT9xSX0QtsR8sWUuyOuOq7g==
@@ -9807,6 +9807,13 @@ raw-body@2.5.2:
     http-errors "2.0.0"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
+
+razorpay@^2.9.6:
+  version "2.9.6"
+  resolved "https://registry.npmjs.org/razorpay/-/razorpay-2.9.6.tgz"
+  integrity sha512-zsHAQzd6e1Cc6BNoCNZQaf65ElL6O6yw0wulxmoG5VQDr363fZC90Mp1V5EktVzG45yPyNomNXWlf4cQ3622gQ==
+  dependencies:
+    axios "^1.6.8"
 
 react-app-polyfill@^3.0.0:
   version "3.0.0"

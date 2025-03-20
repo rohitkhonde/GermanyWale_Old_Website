@@ -19,7 +19,7 @@ import RatingSection from "../component/reviews/RatingSection";
 import Testimonials from "../component/reviews/Testimonials";
 import TestimonialsSlider from "../component/reviews/Testimonials";
 import ChooseUs2 from "../component/chooseUs/ChooseUs2";
-
+// import Product from "./Product";
 const LandingPage = () => {
   const [watchStory, setWatchstory] = useState(false);
   const [localUser] = useState(JSON.parse(localStorage.getItem("user")));
@@ -66,6 +66,7 @@ const LandingPage = () => {
         <TestimonialsSlider />
 
         <News />
+        {/* <Product /> */}
 
         {/* <Footer /> */}
       </div>
