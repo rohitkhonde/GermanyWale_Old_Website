@@ -7,67 +7,84 @@ export default function PricingSection() {
 
   const [paymentStatus, setPaymentStatus] = useState(null);
   const [razorpayLoaded, setRazorpayLoaded] = useState(false);
-
+  const [loading, setLoading] = useState(false);
   // Dynamically load the Razorpay script
-  // useEffect(() => {
-  //   const script = document.createElement("script");
-  //   script.src = "https://checkout.razorpay.com/v1/checkout.js";
-  //   script.async = true;
-  //   script.onload = () => {
-  //     setRazorpayLoaded(true);
-  //   };
-  //   document.body.appendChild(script);
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.async = true;
+    script.onload = () => {
+      setRazorpayLoaded(true);
+    };
+    document.body.appendChild(script);
 
-  //   return () => {
-  //     document.body.removeChild(script);
-  //   };
-  // }, []);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
-  // const handlePayment = async (price, planName, orderId) => {
-  //   try {
-  //     if (!razorpayLoaded) {
-  //       alert("Razorpay is still loading. Please try again in a moment.");
-  //       return;
-  //     }
+  const handlePayment = async (price, planName) => {
+    try {
+      setLoading(true);
 
-  //     // Convert price to a number (remove non-numeric characters)
-  //     const amount = parseInt(price.replace(/\D/g, ""), 10);
+      // 1. Create order on backend
+      const orderResponse = await fetch(
+        "http://localhost:5000/api/payments/create-order",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            amount: parseInt(price.replace(/\D/g, "")),
+            plan: planName,
+          }),
+        }
+      );
 
-  //     const options = {
-  //       key: "rzp_test_OaZFgQnMYQ9Gmd", // Replace with your Razorpay Key ID
-  //       amount: amount * 100, // Amount in paise
-  //       currency: "INR",
-  //       name: "GermanyWale",
-  //       description: `Payment for ${planName} Plan`,
-  //       order_id: orderId, // Use the specific order ID for the plan
-  //       handler: function (response) {
-  //         setPaymentStatus("success");
-  //         alert("Payment successful! Redirecting to homepage...");
-  //         window.location.href = "/"; // Redirect to homepage
-  //       },
-  //       prefill: {
-  //         name: "Rohit Khonde",
-  //         email: "rohitkhonde15999@gmail.com",
-  //         contact: "7276440061",
-  //       },
-  //       theme: {
-  //         color: "#3399cc",
-  //       },
-  //     };
+      const order = await orderResponse.json();
 
-  //     const rzp = new window.Razorpay(options);
-  //     rzp.open();
+      // 2. Initialize Razorpay
+      const options = {
+        key: "rzp_live_Oiy3Gpl9jj96C4",
+        amount: order.amount,
+        currency: "INR",
+        name: "GermanyWale",
+        description: `Payment for ${planName} Plan`,
+        order_id: order.id,
+        handler: async function (response) {
+          // 3. Verify payment on backend
+          const verification = await fetch(
+            "http://localhost:5000/api/payments/verify-payment",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_signature: response.razorpay_signature,
+                plan: planName,
+              }),
+            }
+          );
 
-  //     rzp.on("payment.failed", function (response) {
-  //       setPaymentStatus("failed");
-  //       alert(`Payment failed: ${response.error.description}`);
-  //     });
-  //   } catch (error) {
-  //     console.error("Error creating Razorpay order:", error);
-  //     setPaymentStatus("failed");
-  //     alert("Payment failed. Please try again.");
-  //   }
-  // };
+          const result = await verification.json();
+          if (result.success) {
+            alert("Payment successful!");
+            window.location.href = "/success";
+          } else {
+            alert("Payment verification failed");
+          }
+        },
+        theme: { color: "#3399cc" },
+      };
+
+      const rzp = new window.Razorpay(options);
+      rzp.open();
+    } catch (error) {
+      alert("Payment failed: " + error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const plans = [
     {
@@ -356,13 +373,13 @@ export default function PricingSection() {
               </div>
               <button
                 className="mt-8 w-full rounded-lg px-4 py-3 text-lg font-semibold transition-colors  text-white  bg-gradient-to-r from-[#E56D09] via-[#D83E13] to-[#D83E13] "
-                // onClick={() =>
-                //   handlePayment(
-                //     plan.price.replace(/\D/g, ""),
-                //     plan.name,
-                //     plan.orderId
-                //   )
-                // }
+                onClick={() =>
+                  handlePayment(
+                    plan.price.replace(/\D/g, ""),
+                    plan.name,
+                    plan.orderId
+                  )
+                }
               >
                 {plan.buttonText}
               </button>
