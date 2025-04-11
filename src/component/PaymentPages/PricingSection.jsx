@@ -5,79 +5,67 @@ export default function PricingSection() {
   const formatFeatureName = (text) =>
     text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
 
-  const [paymentStatus, setPaymentStatus] = useState(null);
   const [razorpayLoaded, setRazorpayLoaded] = useState(false);
   const [loading, setLoading] = useState(false);
-  // Dynamically load the Razorpay script
+
+  // Load Razorpay script dynamically
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://checkout.razorpay.com/v1/checkout.js";
     script.async = true;
-    script.onload = () => {
-      setRazorpayLoaded(true);
-    };
+    script.onload = () => setRazorpayLoaded(true);
     document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
+    return () => document.body.removeChild(script);
   }, []);
+
+  // Generate order ID in frontend (not secure for production)
+  const generateOrderId = () => {
+    const timestamp = Date.now();
+    const randomString = Math.random().toString(36).substring(2, 10);
+    return `order_${randomString}_${timestamp}`;
+  };
+
+  // Mock payment verification (in production, this should be server-side)
+  const mockVerifyPayment = (paymentResponse) => {
+    // In a real app, you would verify the signature with your key_secret
+    console.log("Mock verification - always returning true");
+    return true;
+  };
 
   const handlePayment = async (price, planName) => {
     try {
       setLoading(true);
+      const amount = parseInt(price) * 100; // amount in paise
 
-      // 1. Create order on backend
-      const orderResponse = await fetch(
-        "http://localhost:5000/api/payments/create-order",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            amount: parseInt(price.replace(/\D/g, "")),
-            plan: planName,
-          }),
-        }
-      );
-
-      const order = await orderResponse.json();
-
-      // 2. Initialize Razorpay
       const options = {
         key: "rzp_live_Oiy3Gpl9jj96C4",
-        amount: order.amount,
+        amount: amount.toString(),
         currency: "INR",
         name: "GermanyWale",
         description: `Payment for ${planName} Plan`,
-        order_id: order.id,
-        handler: async function (response) {
-          // 3. Verify payment on backend
-          const verification = await fetch(
-            "http://localhost:5000/api/payments/verify-payment",
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                razorpay_payment_id: response.razorpay_payment_id,
-                razorpay_order_id: response.razorpay_order_id,
-                razorpay_signature: response.razorpay_signature,
-                plan: planName,
-              }),
-            }
+        handler: function (response) {
+          alert(
+            `Payment successful! Payment ID: ${response.razorpay_payment_id}`
           );
-
-          const result = await verification.json();
-          if (result.success) {
-            alert("Payment successful!");
-            window.location.href = "/success";
-          } else {
-            alert("Payment verification failed");
-          }
+          window.location.href = "/success";
         },
-        theme: { color: "#3399cc" },
+        prefill: {
+          name: "Dheeraj Dey",
+          email: "marketing.germanywale@gmail.com",
+          contact: "+91 72764 40061",
+        },
+        theme: {
+          color: "#3399cc",
+        },
       };
 
+      // Don't generate order_id client-side - let Razorpay handle it
       const rzp = new window.Razorpay(options);
+
+      rzp.on("payment.failed", function (response) {
+        alert(`Payment failed: ${response.error.description}`);
+      });
+
       rzp.open();
     } catch (error) {
       alert("Payment failed: " + error.message);
