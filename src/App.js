@@ -36,6 +36,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import PARP2 from "./component/PrivacyAndRefundPolicy/PARP2";
 import TAndC from "./component/TermsandCondition/TAndC";
 import Product from "./Product";
+import ReactGA from "react-ga4";
 
 function App() {
   const ScrollToTop = () => {
@@ -47,6 +48,11 @@ function App() {
 
     return null;
   };
+
+  useEffect(() => {
+    ReactGA.initialize("G-QF380E45CZ");
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }, []);
   return (
     <div className="App">
       <Router>
