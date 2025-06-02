@@ -46,8 +46,8 @@ const Navbar = () => {
             About Us
           </Link>
           <Link
-            to="/pricingsection"
-            // to="/study-germany"
+            // to="/pricingsection"
+            to="/study-germany"
             className="text-md font-extrabold text-black hover:text-orange-400"
           >
             Services
@@ -106,8 +106,8 @@ const Navbar = () => {
             About Us
           </Link>
           <Link
-            to="/pricingsection"
-            // to="/study-germany"
+            // to="/pricingsection"
+            to="/study-germany"
             className="block px-4 py-2 text-sm hover:text-orange-300"
             onClick={toggleMenu} // Close menu on click
           >
