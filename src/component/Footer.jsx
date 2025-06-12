@@ -168,7 +168,8 @@ const Footer = () => {
                 <div className="flex items-center mb-2">
                   <img src={germany} alt="flag" className="h-4 me-2" />
                   <span className="text-xs sm:text-md">
-                    Neckarstrasse 44, 64625-Bensheim, Hessen, Germany
+                    {/* Neckarstrasse 44, 64625-Bensheim, Hessen, Germany */}
+                    Neckarstrasse, Bensheim, Hessen, Germany
                   </span>
                 </div>
 
