@@ -8603,6 +8603,11 @@ nocache@2.0.0:
   resolved "https://registry.npmjs.org/nocache/-/nocache-2.0.0.tgz"
   integrity sha512-YdKcy2x0dDwOh+8BEuHvA+mnOKAhmMQDgKBOCUGaLpewdmsRYguYZSom3yA+/OrE61O/q+NMQANnun65xpI1Hw==
 
+node-bin-setup@^1.0.0:
+  version "1.1.4"
+  resolved "https://registry.npmjs.org/node-bin-setup/-/node-bin-setup-1.1.4.tgz"
+  integrity sha512-vWNHOne0ZUavArqPP5LJta50+S8R261Fr5SvGul37HbEDcowvLjwdvd0ZeSr0r2lTSrPxl6okq9QUw8BFGiAxA==
+
 node-fetch@^2.6.9, node-fetch@^2.7.0:
   version "2.7.0"
   resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz"
@@ -8636,6 +8641,13 @@ node-statsd@0.1.1:
   version "0.1.1"
   resolved "https://registry.npmjs.org/node-statsd/-/node-statsd-0.1.1.tgz"
   integrity sha512-QDf6R8VXF56QVe1boek8an/Rb3rSNaxoFWb7Elpsv2m1+Noua1yy0F1FpKpK5VluF8oymWM4w764A4KsYL4pDg==
+
+node@^22.17.0:
+  version "22.17.0"
+  resolved "https://registry.npmjs.org/node/-/node-22.17.0.tgz"
+  integrity sha512-cDrw3NvGAB1QUWxTEd9mX/vf+mAhe42IwBkQ7T9z2GhIPyNM+I1u32NMu9ZgNE85UDUWmIUL4oe4JylVlwvG2Q==
+  dependencies:
+    node-bin-setup "^1.0.0"
 
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"

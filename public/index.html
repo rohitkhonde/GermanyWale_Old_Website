@@ -61,7 +61,7 @@
 
     <!-- Tawk.to Integration -->
     <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
       (function () {
@@ -73,7 +73,7 @@
         s1.setAttribute("crossorigin", "*");
         s0.parentNode.insertBefore(s1, s0);
       })();
-    </script>
+    </script> -->
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <!--End of Tawk.to Script-->
 
@@ -91,6 +91,28 @@
 
       gtag("config", "G-QF380E45CZ");
     </script>
+<script src="https://cdn.chatsimple.ai/chat-bot-loader.js" defer></script>
+    <script type="text/javascript">
+    (function() {
+        // Create and append the chat-bot element
+        var chatBotEl = document.createElement('chat-bot');
+        chatBotEl.setAttribute('platform_id', '5153128d-e924-4be1-843f-d1f0ba72103d');
+        chatBotEl.setAttribute('user_id', '8ab05fdd-f30d-4ba0-9936-416bfc2756d0');
+        chatBotEl.setAttribute('chatbot_id', '209ff7e7-7d63-4c34-b9ec-8e06ec7e3963');
+
+        var chatbotLink = document.createElement('a');
+        chatbotLink.href = 'https://www.chatsimple.ai/?utm_source=widget&utm_medium=referral';
+        chatbotLink.innerHTML = 'chatsimple';
+        chatBotEl.appendChild(chatbotLink);
+
+        document.body.appendChild(chatBotEl);
+
+        // Dynamically load the external script
+        var cs = document.createElement('script');
+        cs.src = 'https://chatsimple-widget.s3.us-east-2.amazonaws.com/chat-bot-loader.js';
+        document.body.appendChild(cs);
+    })();
+</script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -120,5 +142,6 @@
         "
       />
     </a> -->
+<chat-bot platform_id="5153128d-e924-4be1-843f-d1f0ba72103d" user_id="8ab05fdd-f30d-4ba0-9936-416bfc2756d0" chatbot_id="209ff7e7-7d63-4c34-b9ec-8e06ec7e3963"><a href="https://www.chatsimple.ai/?utm_source=widget&utm_medium=referral">chatsimple</a></chat-bot><script src="https://cdn.chatsimple.ai/chat-bot-loader.js" defer></script>
   </body>
 </html>
