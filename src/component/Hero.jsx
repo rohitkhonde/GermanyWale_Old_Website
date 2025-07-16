@@ -128,7 +128,7 @@ const Hero = () => {
             href="/chancekart"
             className="border-2 border-orange-500 text-orange-500 hover:bg-gradient-to-r from-[#FF9422] to-[#D63715] hover:text-white hover:bg-orange-50 px-6 py-2 rounded-md  transition-colors mt-2 mb-2"
           >
-            ChanceKarte live is now
+            ChanceKarte is live now
           </a>
                 </div>
     </>
