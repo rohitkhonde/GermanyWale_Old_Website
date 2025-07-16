@@ -37,6 +37,7 @@ import PARP2 from "./component/PrivacyAndRefundPolicy/PARP2";
 import TAndC from "./component/TermsandCondition/TAndC";
 import Product from "./Product";
 import ReactGA from "react-ga4";
+import ChanceKartHero from "./component/ChanceKart/ChanceKartHero";
 
 function App() {
   const ScrollToTop = () => {
@@ -92,6 +93,7 @@ function App() {
           <Route path="/pricingsection" element={<PricingSection />} />
           <Route path="/privacyandrefund" element={<PARP2 />} />
           <Route path="/terms" element={<TAndC />} />
+          <Route path="/chancekart" element={<ChanceKartHero/>}/>
         </Routes>
         {/* Footer visible on all pages */}
         <Footer />

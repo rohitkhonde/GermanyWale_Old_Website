@@ -53,10 +53,10 @@ const Navbar = () => {
             Services
           </Link>
           <Link
-            to="/reviews"
+            to="/chancekart"
             className="text-md font-extrabold text-black hover:text-orange-400"
           >
-            Reviews
+            ChanceKart
           </Link>
           <Link
             to="/contact"
@@ -114,11 +114,11 @@ const Navbar = () => {
             Services
           </Link>
           <Link
-            to="/reviews"
+            to="/chancekart"
             className="block px-4 py-2 text-sm hover:text-orange-300"
             onClick={toggleMenu} // Close menu on click
           >
-            Reviews
+            ChanceKart
           </Link>
           <Link
             to="/contact"
