@@ -21,6 +21,11 @@ import kripal from "../assets/studentimg/9_preview_rev_1.png";
 import prasad from "../assets/studentimg/prasad.png";
 import antony from "../assets/studentimg/5_preview_rev_1.png";
 import shodhan from "../assets/Updated-Testimonal/shodhanupdated.png";
+import oonkar from "../assets/studentimg/newtestimg1.png";
+import ranveer from "../assets/studentimg/newtestimg2.png";
+import ruchi from "../assets/studentimg/newtestimg3.png";
+import yashas from "../assets/studentimg/newtestimg4.png";
+import namratha from "../assets/studentimg/newtestimg5.png";
 
 // university
 import purvanshiuniversity from "../assets/Updated-Testimonal/purvanshiuniversity.png";
@@ -35,6 +40,11 @@ import taranjituniversity from "../assets/Updated-Testimonal/taranjituniversity.
 import prasaduniversity from "../assets/Updated-Testimonal/prasaduniversity.png";
 import arshiyauniversity from "../assets/Updated-Testimonal/arshiyauniversity.png";
 import antonyuniversity from "../assets/Updated-Testimonal/antonyuniversity.png";
+import oonkaruniversity from "../assets/Updated-Testimonal/newtestuniv1.png";
+import ranveeruniversity from "../assets/Updated-Testimonal/newtestuniv2.png";
+import ruchiuniversity from "../assets/Updated-Testimonal/newtestuniv3.png";
+import yashasuniversity from "../assets/Updated-Testimonal/newtestuniv4.png";
+import namrathauniversity from "../assets/Updated-Testimonal/newtestuniv5.png";
 
 import TestiCard from "./testiCard";
 
@@ -214,6 +224,66 @@ function Testimonal() {
         "https://www.instagram.com/p/C6lA9JeOWm_/?igsh=MWdybDB5N2N4YWV1dQ==",
       university: shagununiversity,
       course: "Master’s in Electromobility",
+    },
+     {
+      imageSrc: oonkar,
+      name: "Oonkar",
+      para1:
+       `After 6 years of work, I chose to pursue an MBA in Germany. Germanywale guided me through every step — from course selection, applications, and VISA to accommodation.`,
+      // para2: ` dream university with immense support.`,
+
+      videoLink:
+        "https://www.instagram.com/reel/DJUH_Kqz7N5/?igsh=MXY2emY4MmlpZmcxag==",
+      university: oonkaruniversity,
+      course: "Master’s in General Management",
+    },
+     {
+      imageSrc: ranveer,
+      name: "Ranveer",
+      para1:
+      `My experience with Germanywale has been nothing short of fabulous and extraordinary. I thoroughly enjoyed the entire process.The team is`,
+      para2: ` incredibly cooperative.`,
+
+      videoLink:
+      "https://www.instagram.com/reel/DNlHnnZz59P/?igsh=MTB4djRtamxlZ2psNg==",
+      university: ranveeruniversity,
+      course: "Master’s in Health Management",
+    },
+     {
+      imageSrc: ruchi,
+      name: "Ruchi",
+      para1:
+       `I truly appreciated the team's dedication. Whenever there was a problem, someone was always there to help. `,
+      // para2: `And whenever I had any doubts, the team patiently explained even the smallest details.`,
+
+      videoLink:
+        "/",
+      university: ruchiuniversity,
+      course: "Master’s in Economics",
+    },
+     {
+      imageSrc: yashas,
+      name: "Yashas",
+      para1:
+        `Germanywale made everything so simple — they had it all covered. From paperwork to VISA to finding the right course, they handled it like pros. `,
+      // para2: `Super grateful for their help… they’re genuinely here to help people!`,
+
+      videoLink:
+        "https://www.instagram.com/reel/DJHYixxTeP1/?igsh=YmdhNnR6N2t3YmRn",
+      university: yashasuniversity,
+      course: "Master’s in Applied Data Science and Analytics",
+    },
+     {
+      imageSrc: namratha,
+      name: "Namratha",
+      para1:
+        `Starting late in my Germany journey felt stressful, but Germanywale’s swift, clear, and constant support made it magical.`,
+      para2: ` I’m truly grateful and have already recommended them to friends!`,
+
+      videoLink:
+        "https://www.instagram.com/reel/DI_Wj2jNe_8/?igsh=MXFmaW5rbGg0bnR2eA==",
+      university: namrathauniversity,
+      course: "Master’s in Applied Data Science and Analytics",
     },
   ];
 
