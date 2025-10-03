@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: "Gilroy-Medium", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.mentor-slider .slick-prev::before {
+  color: #d63815 !important;
+  font-size: 20px !important;
+}
+
+.mentor-slider .slick-next::before {
+  color: #d63815 !important;
+  font-size: 20px !important;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("styles/fonts/gilroy/Gilroy-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("styles/fonts/gilroy/Gilroy-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("styles/fonts/gilroy/Gilroy-Medium.ttf");
+}
+
+@font-face {
+  font-family: "ZonaPro";
+  src: url("styles/fonts/ZonaPro.otf");
+}
+
+@font-face {
+  font-family: "ZonaPro-Bold";
+  src: url("styles/fonts/ZonaPro-Bold.otf");
+}
+
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("styles/fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("styles/fonts/gilroy/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+  /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("styles/fonts/gilroy/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("styles/fonts/gilroy/Gilroy-Black.ttf") format("truetype");
+  font-weight: 900;
+  /* Black */
+  font-style: bold;
+}
