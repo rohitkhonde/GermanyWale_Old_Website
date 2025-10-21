@@ -162,6 +162,7 @@ const Footer = () => {
             <div className="flex flex-wrap justify-between sm:px-10">
               <div className="text-[#969696]">
                 Copyrights reserved Germanywale, All rights reserved
+                <a className="block text-[#101010]" href="https://europewale.vercel.app/" target="_blank">upcoming</a>
               </div>
               <div className="text-[#A2A1A1] flex flex-col">
                 {/* Germany Address */}
