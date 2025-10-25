@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <div
       className="hidden sticky sm:flex justify-center px-16 py-6"
-      style={{ fontFamily: "Gilroy-Medium", position: "sticky", zIndex: "100" }}
+      style={{ fontFamily: "Gilroy-Medium", position: "sticky", zIndex: "1" }}
     >
       <div className="flex w-[75%]  flex-wrap md:space-x-14 lg:space-x-2">
         <p className="flex items-center space-x-1 text-xs">
