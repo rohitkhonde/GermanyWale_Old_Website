@@ -22,7 +22,7 @@ const Hero = ({onBookCallClick}) => {
         />
       </div>
 
-      <div className='container flex flex-col lg:flex-row items-center justify-center lg:justify-around gap-12 relative z-10'>
+      <div className='container  flex flex-col text-wrap lg:flex-row items-center justify-center lg:justify-around gap-12 relative z-10'>
         {/* Left-section text-div - Centered on mobile/tablet */}
         <motion.div 
           className="flex flex-col w-[100%] lg:w-1/2 px-4 sm:px-6 items-center lg:items-start text-center lg:text-left space-y-6 md:space-y-8"
@@ -31,7 +31,7 @@ const Hero = ({onBookCallClick}) => {
           transition={{ duration: 0.6 }}
         >
           <motion.h1 
-            className='text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-black relative'
+            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-normal text-black relative"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
