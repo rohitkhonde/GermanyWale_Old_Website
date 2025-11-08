@@ -1,6 +1,6 @@
 import { useState } from "react";
-// import { Menu, X } from "lucide-react"; // Import icons for mobile menu
-// import logo from "../../assets/image/logo.svg";
+import { Menu, X } from "lucide-react"; // Import icons for mobile menu
+import logo from "../../assets/image/logo.svg";
 import { Link } from "react-router-dom";
 import ChanceKartNextpage from "./ChanceKartNextpage";
 
@@ -88,7 +88,7 @@ const ChanceKartHero = () => {
         <div className="md:hidden bg-white shadow-lg container mx-auto px-4 py-2">
           <div className="flex flex-col space-y-4">
             <a
-              href="/"
+              href="#"
               className="text-black hover:text-orange-500 transition-colors py-2 border-b border-gray-100"
               onClick={() => setMobileMenuOpen(false)}
             >

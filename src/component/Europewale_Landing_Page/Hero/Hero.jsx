@@ -1,10 +1,10 @@
 import React from 'react';
 import hero from "../../../assets/Hero/heroimg.png";
 import heroback from "../../../assets/Hero/heroback.jpeg";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-// import SignUpForm from "./Form";
-// import { href } from 'react-router-dom';
+import SignUpForm from "./Form";
+import { href } from 'react-router-dom';
 
 const Hero = ({onBookCallClick}) => {
   return (
@@ -111,7 +111,7 @@ Study in Germany made easy  with 100% admission guaranteed, expert guidance and 
         >
           <img 
             src={hero} 
-            alt="hero" 
+            alt="Hero Image" 
             className="w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[600px] h-auto object-cover rounded-lg"
           />
         </motion.div>
