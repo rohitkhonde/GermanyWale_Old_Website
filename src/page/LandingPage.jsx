@@ -1,28 +1,46 @@
-import React, { useEffect, useState } from "react";
-import Hero from "../component/Hero";
-// import Navbar from "../component/Navbar";
-// import Header from "../component/Header";
-import Testimonal from "../component/Testimonal";
-import StudyGermany from "../component/StudyGermany";
-import SyncDocument from "../component/SyncDocument";
-import StayinTouch from "../component/StayinTouch";
-import Transparency from "../component/Transparency";
+import React, { useEffect, useState, lazy, Suspense } from "react";
+
 import Footer from "../component/Footer";
-import Universitycomp from "../component/Universitycomp";
-import Usp from "../component/Usp";
-import News from "../component/News";
-import Partners from "../component/partners/Partners";
-import Webslider from "../component/slider/Webslider";
-import MentorSection from "../component/mentor/MentorSection";
-import Header from "../component/reviews/Header";
-import RatingSection from "../component/reviews/RatingSection";
-import Testimonials from "../component/reviews/Testimonials";
-import TestimonialsSlider from "../component/reviews/Testimonials";
-import ChooseUs2 from "../component/chooseUs/ChooseUs2";
-// import Product from "./Product";
+// ✅ LAZY LOAD heavy components
+const Hero = lazy(() => import("../component/Hero"));
+const Testimonal = lazy(() => import("../component/Testimonal"));
+const StudyGermany = lazy(() => import("../component/StudyGermany"));
+const SyncDocument = lazy(() => import("../component/SyncDocument"));
+const StayinTouch = lazy(() => import("../component/StayinTouch"));
+const Transparency = lazy(() => import("../component/Transparency"));
+const Universitycomp = lazy(() => import("../component/Universitycomp"));
+const Usp = lazy(() => import("../component/Usp"));
+const News = lazy(() => import("../component/News"));
+const Partners = lazy(() => import("../component/partners/Partners"));
+const MentorSection = lazy(() => import("../component/mentor/MentorSection"));
+const TestimonialsSlider = lazy(() => import("../component/reviews/Testimonials"));
+
+// ✅ Keep light components as regular imports (if they're small)
+
+// Loading component for sections
+const SectionLoader = () => (
+  <div className="section-loader" style={{ 
+    height: '200px', 
+    display: 'flex', 
+    justifyContent: 'center', 
+    alignItems: 'center',
+    background: '#f5f5f5',
+    borderRadius: '8px',
+    margin: '20px 0'
+  }}>
+    <div>Loading section...</div>
+  </div>
+);
+
 const LandingPage = () => {
   const [watchStory, setWatchstory] = useState(false);
   const [localUser] = useState(JSON.parse(localStorage.getItem("user")));
+  const [visibleSections, setVisibleSections] = useState({
+    hero: true,
+    university: false,
+    testimonial: false,
+    // ... add more sections as needed
+  });
 
   console.log(localUser, "localdata");
 
@@ -31,6 +49,29 @@ const LandingPage = () => {
       setWatchstory(true);
     }, 6000);
   };
+
+  // Intersection Observer to load sections when they come into view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setVisibleSections(prev => ({
+              ...prev,
+              [entry.target.dataset.section]: true
+            }));
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    // Observe sections
+    const sections = document.querySelectorAll('[data-section]');
+    sections.forEach(section => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (localUser?._id) {
@@ -41,36 +82,67 @@ const LandingPage = () => {
   }, [localUser]);
 
   return (
-    <>
-      <div>
-        {/* <Header />
-        <Navbar /> */}
+    <div>
+      {/* Hero - Load immediately */}
+      <Suspense fallback={<SectionLoader />}>
         <Hero />
-        <Universitycomp />
-        <Testimonal />
-        <Usp />
-        {/* <ChooseUs2 /> */}
-        <StudyGermany />
-        <Transparency />
-        <SyncDocument />
+      </Suspense>
 
-        {/* Partners Section */}
-        <Partners />
-        {/* <Webslider /> */}
-        {/* <SyncDocument /> */}
-        <MentorSection />
-        <StayinTouch />
-
-        {/* <Header /> */}
-        {/* <RatingSection /> */}
-        <TestimonialsSlider />
-
-        <News />
-        {/* <Product /> */}
-
-        {/* <Footer /> */}
+      {/* University - Load when in view */}
+      <div data-section="university">
+        {visibleSections.university && (
+          <Suspense fallback={<SectionLoader />}>
+            <Universitycomp />
+          </Suspense>
+        )}
       </div>
-    </>
+
+      {/* Testimonial - Load when in view */}
+      <div data-section="testimonial">
+        {visibleSections.testimonial && (
+          <Suspense fallback={<SectionLoader />}>
+            <Testimonal />
+          </Suspense>
+        )}
+      </div>
+
+      {/* Other sections with conditional loading */}
+      <Suspense fallback={<SectionLoader />}>
+        <Usp />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <StudyGermany />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <Transparency />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <SyncDocument />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <Partners />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <MentorSection />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <StayinTouch />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <TestimonialsSlider />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <News />
+      </Suspense>
+    </div>
   );
 };
 
