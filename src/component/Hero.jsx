@@ -8,7 +8,7 @@ import oodd from "../assets/Hero/audi1.jpg";
 import sap from "../assets/Hero/sap.png";
 import lufthansa from "../assets/Hero/lufthansa2.png";
 
-// New image
+
 import t from "../assets/Hero/t.png";
 import b from "../assets/Hero/b.png";
 import a from "../assets/Hero/a.png";
