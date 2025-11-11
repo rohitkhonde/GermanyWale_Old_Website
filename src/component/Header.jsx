@@ -33,7 +33,7 @@ const Header = () => {
               />
             </Link>
           </span>
-          <span> +91-8484977234</span>
+          <span>+91-8484977234</span>
         </p>
         <p className="flex items-center space-x-1 text-xs">
           <span>

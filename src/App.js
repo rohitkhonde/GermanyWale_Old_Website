@@ -64,7 +64,7 @@ function App() {
         <ScrollToTop /> {/* Scroll to top logic */}
         <Header />
         <Navbar />
-        <SpeedInsights />
+        {/* <SpeedInsights /> */}
         {/* <Product /> */}
         {/* Routing */}
         <Routes>
