@@ -100,7 +100,7 @@ export default function Google() {
 
       // Send data to Google Sheets API
       const response = await fetch(
-        "https://v1.nocodeapi.com/rohitkhonde/google_sheets/cbMkHTwXxstZOMlp?tabId=Sheet1",
+        "https://v1.nocodeapi.com/rohitkhonde/google_sheets/kSVFrMWNsPCLuxEz?tabId=Sheet1",
         requestOptions
       );
 
