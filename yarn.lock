@@ -9909,6 +9909,11 @@ react-error-overlay@^6.0.11:
   resolved "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.11.tgz"
   integrity sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==
 
+react-facebook-pixel@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/react-facebook-pixel/-/react-facebook-pixel-1.0.4.tgz"
+  integrity sha512-givZY8MS0v/mdbRzvcvouBo/j0TtDiu/93f4gIjJXwDDgwlf6bYUiQvb2qcqjluOOD/hIKUQHNYLNsSOnoEklg==
+
 react-fast-marquee@^1.6.4:
   version "1.6.4"
   resolved "https://registry.npmjs.org/react-fast-marquee/-/react-fast-marquee-1.6.4.tgz"

@@ -6,9 +6,8 @@ import {
   Routes,
   Route,
   useLocation,
-  
 } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import Navbar from "./component/Navbar";
 import Header from "./component/Header";
@@ -43,6 +42,29 @@ import Hero from "./component/Europewale_Landing_Page/Hero/Hero";
 import EuropewaleLandingPage from "./page_Europewale/EuropewaleLandingPage";
 
 function App() {
+  const TrackingManager = () => {
+    const location = useLocation();
+    const gaInitialized = useRef(false);
+
+    useEffect(() => {
+      if (!gaInitialized.current) {
+        ReactGA.initialize("G-QF380E45CZ");
+        gaInitialized.current = true;
+      }
+
+      const pagePath = `${location.pathname}${location.search}`;
+      ReactGA.send({ hitType: "pageview", page: pagePath });
+    }, [location.pathname, location.search]);
+
+    useEffect(() => {
+      if (typeof window.fbq === "function") {
+        window.fbq("track", "PageView");
+      }
+    }, [location.pathname, location.search]);
+
+    return null;
+  };
+
   const ScrollToTop = () => {
     const { pathname } = useLocation();
 
@@ -53,15 +75,12 @@ function App() {
     return null;
   };
 
-  useEffect(() => {
-    ReactGA.initialize("G-QF380E45CZ");
-    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-  }, []);
   return (
     <div className="App">
       <Router>
         {/* Shared components visible on all pages */}
         <ScrollToTop /> {/* Scroll to top logic */}
+        <TrackingManager />
         <Header />
         <Navbar />
         {/* <SpeedInsights /> */}

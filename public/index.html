@@ -93,6 +93,29 @@
 
       gtag("config", "G-QF380E45CZ");
     </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = true;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = true;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "1191134736256305");
+      fbq("track", "PageView");
+    </script>
+    <!-- End Meta Pixel Code -->
 <!-- <script src="https://cdn.chatsimple.ai/chat-bot-loader.js" defer></script>
     <script type="text/javascript">
     (function() {
@@ -117,6 +140,15 @@
 </script> -->
   </head>
   <body>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1191134736256305&ev=PageView&noscript=1"
+        alt=""
+      />
+    </noscript>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
